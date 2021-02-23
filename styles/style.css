@@ -1,9 +1,14 @@
+
+/* Cosas Generales */
 body{
     font-family: 'Raleway', sans-serif;
-    
+    align-items: center;
+    justify-content: center;
+   
     
 }
 h1{
+
     
     font-weight: 400;
 }
@@ -16,14 +21,186 @@ p{
     font-weight: 400;
 }
 
-button{
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
 
-ul{
+button{
+    color:rgb(25, 26, 29);
+    background-color: rgb(255, 162, 55);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    padding:10px;
+    border-style: none;
+    width:100px;
+}
+
+
+
+
+
+
+ol{
+    
     list-style: none;
 }
-ol{
-    list-style: none;
+
+main{
+    height:100vh ;
+    background-size:cover;
+    background-image: url(/recursos/banner.png);
+    position:relative;
+}
+
+/* icono */
+
+
+header img{
+    margin-top:10px;
+    margin-left: 40px;
+    height:50px;
+    width:200px;
+}
+
+/* banner */
+
+.navegacion{
+    position:absolute;
+    top:30px;
+    right:0;
+    width: 50%;
+ }
+ 
+ .navegacion ul{
+     color:white;
+     list-style: none;
+     display: flex;
+     justify-content: space-around;
+     margin-right: 10px;
+ 
+ 
+ }
+ 
+ .navegacion ul input{
+     opacity: 30%;
+     border-radius: 5px;
+     border-style: none;
+     margin-left:10px;
+ }
+
+
+
+.bannerSection{
+    color:white;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.bannerSection button{
+    color:white;
+    background-color: rgb(55, 158, 255);
+    width:100px;
+}
+
+.bannerSection h1{
+    font-size: 40px;
+}
+
+.bannerSection p{
+    padding-top:30px;
+    padding-bottom: 30px;
+    font-size: 16px;
+}
+
+
+.bannerSection button a{
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+/* vinilos */
+
+.vinilosArticle{
+    height:100vh ;
+    background-color:  rgb(255, 208, 55);
+
+}
+
+.cancionesArticle{
+    height:100vh ;
+    background-color:  rgb(55, 171, 238);
+
+
+}
+
+.joinArticle{
+    height:100vh ;
+    background-color:  rgb(7, 22, 31);
+}
+
+.subscribeArticle{
+    height:100vh ;
+    background-color:  rgb(55, 238, 131);
+
+}
+
+.newsArticle{
+    height:100vh ;
+    background-color:  rgb(255, 255, 255);
+
+}
+
+.newsArticle img{
+    height:600px ;
+   
+
+}
+
+
+/* Footer design */
+.footer{
+    height:60vh ;
+    color:gray;
+    background-color: green;
+    background-color: rgb(25, 26, 29);
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.footer img{
+    width: 100px;
+    height:100px;
+}
+
+.footer section img{
+    width: 200px;
+    height:50px;
+}
+
+.footer p .icon{
+    width: 30px;
+    height:30px;
+
+}
+
+
+/* Estilo responsive */
+@media screen and (max-width:1000px){
+
+}
+
+
+
+@media screen and (max-width:850px){
+
 }
