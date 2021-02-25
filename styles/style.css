@@ -46,61 +46,6 @@ ol {
   list-style: none;
 }
 
-main {
-  height: 100vh;
-  background-size: cover;
-  background-image: url(/recursos/banner.png);
-  position: relative;
-}
-
-/* icono */
-header img {
-  margin-top: 10px;
-  margin-left: 40px;
-  height: 50px;
-  width: 200px;
-}
-
-/* banner */
-/* vinilos */
-.vinilosArticle {
-  height: 100vh;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(32.65%, #1a799d), color-stop(132.93%, #000000));
-  background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.vinilosArticle .viniliosArticle__img {
-  height: 400px;
-  width: 400px;
-}
-
-.vinilosArticle h2 {
-  color: white;
-}
-
-/* Newsletter */
-.newsArticle {
-  height: 100vh;
-  background-color: white;
-}
-
-.newsArticle img {
-  height: 600px;
-}
-
 /* Estilo responsive */
 .footer {
   height: 60vh;
@@ -197,8 +142,8 @@ header img {
 
 .subscribe__section .subscribe__article {
   width: 25%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
   padding-bottom: 4%;
   padding-top: 2%;
   display: -webkit-box;
@@ -263,7 +208,6 @@ header img {
 }
 
 .cancionesArticle {
-  height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(-23.43%, rgba(255, 225, 70, 0)), color-stop(34.25%, #ffa346));
   background: linear-gradient(360deg, rgba(255, 225, 70, 0) -23.43%, #ffa346 34.25%);
   display: -webkit-box;
@@ -296,7 +240,6 @@ header img {
 
 .cancionesArticle__container {
   width: 80%;
-  height: 80%;
   margin: 2rem auto;
   background-color: black;
 }
@@ -435,5 +378,57 @@ header img {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 14px;
+}
+
+main {
+  height: 100vh;
+  background-size: cover;
+  background-image: url(/recursos/banner.png);
+  position: relative;
+}
+
+/* icono */
+header img {
+  margin-top: 10px;
+  margin-left: 40px;
+  height: 50px;
+  width: 200px;
+}
+
+.newsArticle {
+  height: 100vh;
+  background-color: white;
+}
+
+.newsArticle img {
+  height: 600px;
+}
+
+.vinilosArticle {
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(32.65%, #1a799d), color-stop(132.93%, #000000));
+  background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.vinilosArticle .viniliosArticle__img {
+  height: 400px;
+  width: 400px;
+}
+
+.vinilosArticle h2 {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

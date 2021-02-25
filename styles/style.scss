@@ -39,55 +39,11 @@ ol {
     list-style: none;
 }
 
-main {
-    height: 100vh;
-    background-size: cover;
-    background-image: url(/recursos/banner.png);
-    position: relative;
-}
-
-/* icono */
-
-header img {
-    margin-top: 10px;
-    margin-left: 40px;
-    height: 50px;
-    width: 200px;
-}
-
-/* banner */
 
 
-/* vinilos */
 
-.vinilosArticle {
-    height: 100vh;
-    background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 
-    .viniliosArticle__img {
-        height: 400px;
-        width: 400px;
-    }
 
-    h2 {
-        color: white;
-    }
-}
-
-/* Newsletter */
-
-.newsArticle {
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-}
-
-.newsArticle img {
-    height: 600px;
-}
 
 /* Estilo responsive */
 @media screen and (max-width: 1000px) {
@@ -101,3 +57,5 @@ header img {
 @import "./_join.scss";
 @import "./_music.scss";
 @import "./_banner.scss";
+@import "./_newsletter.scss";
+@import "./_vinyl.scss";
