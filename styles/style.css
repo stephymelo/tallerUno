@@ -1,6 +1,6 @@
 /* Cosas Generales */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -25,7 +25,7 @@ body p {
 body button {
   color: #191a1d;
   background-color: #ffa237;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 14px;
   border-radius: 5px;
@@ -62,75 +62,11 @@ header img {
 }
 
 /* banner */
-.navegacion {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  width: 50%;
-}
-
-.navegacion ul {
-  color: white;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-right: 10px;
-}
-
-.navegacion ul input {
-  opacity: 30%;
-  border-radius: 5px;
-  border-style: none;
-  margin-left: 10px;
-}
-
-.bannerSection {
-  color: white;
-  height: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: 40px;
-}
-
-.bannerSection button {
-  color: white;
-  background-color: #379eff;
-  width: 100px;
-}
-
-.bannerSection h1 {
-  font-size: 40px;
-}
-
-.bannerSection p {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  font-size: 16px;
-}
-
-.bannerSection button a {
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-}
-
 /* vinilos */
 .vinilosArticle {
   height: 100vh;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(32.65%, #1A799D), color-stop(132.93%, #000000));
-  background: linear-gradient(360deg, #1A799D 32.65%, #000000 132.93%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(32.65%, #1a799d), color-stop(132.93%, #000000));
+  background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,35 +89,6 @@ header img {
 
 .vinilosArticle h2 {
   color: white;
-}
-
-/* Canciones */
-.cancionesArticle {
-  height: 100vh;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(-23.43%, rgba(255, 225, 70, 0)), color-stop(34.25%, #FFA346));
-  background: linear-gradient(360deg, rgba(255, 225, 70, 0) -23.43%, #FFA346 34.25%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.cancionesArticle__menu {
-  color: white;
-  list-style: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-right: 10px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 /* Newsletter */
@@ -290,7 +197,10 @@ header img {
 
 .subscribe__section .subscribe__article {
   width: 25%;
-  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 4%;
+  padding-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,6 +216,19 @@ header img {
           justify-content: space-between;
   -webkit-box-shadow: -4px 4px 10px 3px rgba(0, 0, 0, 0.25), 10px 10px 10px 3px rgba(0, 0, 0, 0.25);
           box-shadow: -4px 4px 10px 3px rgba(0, 0, 0, 0.25), 10px 10px 10px 3px rgba(0, 0, 0, 0.25);
+}
+
+.subscribe__section .subscribe__article h4 {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.subscribe__section .subscribe__article li {
+  display: inline-block;
+}
+
+.subscribe__section .subscribe__article .subscribe__icons {
+  padding-right: 10px;
 }
 
 .joinArticle {
@@ -337,5 +260,180 @@ header img {
 
 .joinArticle h2 {
   color: white;
+}
+
+.cancionesArticle {
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-23.43%, rgba(255, 225, 70, 0)), color-stop(34.25%, #ffa346));
+  background: linear-gradient(360deg, rgba(255, 225, 70, 0) -23.43%, #ffa346 34.25%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cancionesArticle__menu {
+  color: white;
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cancionesArticle__menu li {
+  padding-left: 15%;
+}
+
+.cancionesArticle__container {
+  width: 80%;
+  height: 80%;
+  margin: 2rem auto;
+  background-color: black;
+}
+
+.cancionesArticle__container .galeria {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (5vw)[8];
+      grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+}
+
+.cancionesArticle__container .galeria .galeria__item--1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.cancionesArticle__container .galeria .galeria__item--2 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.cancionesArticle__container .galeria .galeria__item--3 {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 9;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.cancionesArticle__container .galeria .galeria__item--4 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.cancionesArticle__container .galeria .galeria__item--5 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.cancionesArticle__container .galeria .galeria__item--6 {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 9;
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.cancionesArticle__container .galeria .galeria__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.navegacion {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 50%;
+}
+
+.navegacion ul {
+  color: white;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 10px;
+}
+
+.navegacion ul input {
+  opacity: 30%;
+  border-radius: 5px;
+  border-style: none;
+  margin-left: 10px;
+}
+
+.bannerSection {
+  color: white;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 40px;
+}
+
+.bannerSection button {
+  color: white;
+  background-color: #379eff;
+  width: 100px;
+}
+
+.bannerSection h1 {
+  font-size: 40px;
+}
+
+.bannerSection p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 16px;
+}
+
+.bannerSection button a {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

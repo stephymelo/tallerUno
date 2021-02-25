@@ -1,0 +1,53 @@
+.navegacion {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 50%;
+}
+
+.navegacion ul {
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10px;
+}
+
+.navegacion ul input {
+    opacity: 30%;
+    border-radius: 5px;
+    border-style: none;
+    margin-left: 10px;
+}
+
+.bannerSection {
+    color: white;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.bannerSection button {
+    color: white;
+    background-color: rgb(55, 158, 255);
+    width: 100px;
+}
+
+.bannerSection h1 {
+    font-size: 40px;
+}
+
+.bannerSection p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 16px;
+}
+
+.bannerSection button a {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}

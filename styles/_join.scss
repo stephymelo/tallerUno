@@ -1,21 +1,19 @@
-.joinArticle{
-    height:100vh ;
+.joinArticle {
+    height: 100vh;
     background: linear-gradient(360deg, #172631 52.05%, rgba(23, 38, 49, 0) 143.29%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
-    .joinArticle__img{
-        position: relative;     
+    .joinArticle__img {
+        position: relative;
     }
-    .joinArticle__img1{
+    .joinArticle__img1 {
         position: absolute;
-             
     }
 
-    h2{
-        color:white;
+    h2 {
+        color: white;
     }
 }
-
