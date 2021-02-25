@@ -1,0 +1,206 @@
+@import './footer.scss';
+@import './subscribe.scss';
+@import './join.scss';
+
+/* Cosas Generales */
+body{
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font-weight: 400;
+    }
+    h2{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    p{ 
+        font-weight: 400;
+    }
+   
+    button{
+        color:rgb(25, 26, 29);
+        background-color: rgb(255, 162, 55);
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        padding:10px;
+        border-style: none;
+        width:200px;
+    }
+}
+
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+
+ol{
+    
+    list-style: none;
+}
+
+main{
+    height:100vh ;
+    background-size:cover;
+    background-image: url(/recursos/banner.png);
+    position:relative;
+}
+
+/* icono */
+
+
+header img{
+    margin-top:10px;
+    margin-left: 40px;
+    height:50px;
+    width:200px;
+}
+
+/* banner */
+
+.navegacion{
+    position:absolute;
+    top:30px;
+    right:0;
+    width: 50%;
+ }
+ 
+ .navegacion ul{
+     color:white;
+     list-style: none;
+     display: flex;
+     justify-content: space-around;
+     margin-right: 10px;
+ 
+ 
+ }
+ 
+ .navegacion ul input{
+     opacity: 30%;
+     border-radius: 5px;
+     border-style: none;
+     margin-left:10px;
+ }
+
+
+
+.bannerSection{
+    color:white;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.bannerSection button{
+    color:white;
+    background-color: rgb(55, 158, 255);
+    width:100px;
+}
+
+.bannerSection h1{
+    font-size: 40px;
+}
+
+.bannerSection p{
+    padding-top:30px;
+    padding-bottom: 30px;
+    font-size: 16px;
+}
+
+
+.bannerSection button a{
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+/* vinilos */
+
+.vinilosArticle{
+    height:100vh ;
+    background: linear-gradient(360deg, #1A799D 32.65%, #000000 132.93%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .viniliosArticle__img{
+        height: 400px;
+        width:400px;
+    
+    }
+    
+
+    h2{
+        color:white;
+    }
+    
+
+}
+
+
+
+/* Canciones */
+.cancionesArticle{
+    height:100vh ;
+    background: linear-gradient(360deg, rgba(255, 225, 70, 0) -23.43%, #FFA346 34.25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+
+    &__menu{
+        color:white;
+        list-style: none;
+        display: inline-flex;
+        margin-right: 10px;
+        justify-content: space-evenly;
+       
+    }
+
+}
+
+
+
+
+
+/* Newsletter */
+
+.newsArticle{
+    height:100vh ;
+    background-color:  rgb(255, 255, 255);
+
+}
+
+
+.newsArticle img{
+    height:600px ;
+   
+
+}
+
+
+
+
+
+/* Estilo responsive */
+@media screen and (max-width:1000px){
+
+}
+
+
+
+@media screen and (max-width:850px){
+
+}
