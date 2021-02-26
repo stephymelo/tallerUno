@@ -10,16 +10,18 @@ body {
 }
 
 body h1 {
+  font-size: 2em;
   font-weight: 400;
 }
 
 body h2 {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 600;
 }
 
 body p {
   font-weight: 400;
+  font-size: 1.5em;
 }
 
 body button {
@@ -27,11 +29,13 @@ body button {
   background-color: #ffa237;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.5em;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 40px 10px 40px;
   border-style: none;
-  width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 a {
@@ -42,19 +46,15 @@ a:hover {
   text-decoration: underline;
 }
 
-ol {
-  list-style: none;
-}
-
 /* Estilo responsive */
 .footer {
-  height: 60vh;
+  height: 25vh;
   color: gray;
   background-color: #172631;
 }
 
 .footer .footer__main {
-  height: 50vh;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,8 +79,22 @@ ol {
   padding-right: 50px;
 }
 
+.footer .footer__main .footer__section h3 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.footer .footer__main .footer__section p {
+  padding-top: 20px;
+}
+
 .footer .footer__main .footer__section1 {
   padding-right: 50px;
+}
+
+.footer .footer__main .footer__section1 .footer__options li {
+  font-size: 20px;
+  padding-top: 10px;
 }
 
 .footer .footer__main .footer__section2 {
@@ -99,6 +113,7 @@ ol {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 20px;
 }
 
 .footer p .icon {
@@ -123,6 +138,7 @@ ol {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  background: url(/recursos/vinyl.png) right bottom no-repeat, url(/recursos/tape.png) center left no-repeat;
 }
 
 .subscribe__section {
@@ -143,7 +159,7 @@ ol {
 .subscribe__section .subscribe__article {
   width: 25%;
   padding-left: 2%;
-  padding-right: 2%;
+  padding-right: 3%;
   padding-bottom: 4%;
   padding-top: 2%;
   display: -webkit-box;
@@ -156,30 +172,40 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: white;
   -webkit-box-shadow: -4px 4px 10px 3px rgba(0, 0, 0, 0.25), 10px 10px 10px 3px rgba(0, 0, 0, 0.25);
           box-shadow: -4px 4px 10px 3px rgba(0, 0, 0, 0.25), 10px 10px 10px 3px rgba(0, 0, 0, 0.25);
 }
 
 .subscribe__section .subscribe__article h4 {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+}
+
+.subscribe__section .subscribe__article ol {
+  list-style: none;
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .subscribe__section .subscribe__article li {
+  padding-left: 10%;
+  font-size: 24px;
   display: inline-block;
 }
 
 .subscribe__section .subscribe__article .subscribe__icons {
-  padding-right: 10px;
+  padding-right: 10%;
 }
 
 .joinArticle {
-  height: 100vh;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(52.05%, #172631), color-stop(143.29%, rgba(23, 38, 49, 0)));
-  background: linear-gradient(360deg, #172631 52.05%, rgba(23, 38, 49, 0) 143.29%);
+  background: gray;
+  /*background-color: linear-gradient(360deg, #172631 52.05%, rgba(23, 38, 49, 0) 143.29%);*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,14 +219,23 @@ ol {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-image: url(/recursos/radiowaves.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.joinArticle p {
+  padding-top: 1.2%;
 }
 
 .joinArticle .joinArticle__img {
-  position: relative;
+  padding-top: 3%;
 }
 
-.joinArticle .joinArticle__img1 {
-  position: absolute;
+.joinArticle button {
+  margin-top: 30px;
 }
 
 .joinArticle h2 {
@@ -220,6 +255,11 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 2%;
+}
+
+.cancionesArticle h2 {
+  color: white;
 }
 
 .cancionesArticle__menu {
@@ -235,13 +275,14 @@ ol {
 }
 
 .cancionesArticle__menu li {
+  padding-top: 30px;
   padding-left: 15%;
+  font-size: 1.7em;
 }
 
 .cancionesArticle__container {
   width: 80%;
   margin: 2rem auto;
-  background-color: black;
 }
 
 .cancionesArticle__container .galeria {
@@ -317,7 +358,6 @@ ol {
 }
 
 .navegacion {
-  position: absolute;
   top: 30px;
   right: 0;
   width: 50%;
@@ -343,7 +383,7 @@ ol {
 
 .bannerSection {
   color: white;
-  height: 600px;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,33 +391,37 @@ ol {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 5% 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 40px;
+  margin-left: 150px;
 }
 
 .bannerSection button {
   color: white;
   background-color: #379eff;
-  width: 100px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .bannerSection h1 {
-  font-size: 40px;
+  font-size: 6em;
 }
 
 .bannerSection p {
-  padding-top: 30px;
+  padding-top: 1.5%;
   padding-bottom: 30px;
-  font-size: 16px;
+  font-size: 1.4em;
 }
 
 .bannerSection button a {
+  padding: 10px;
   color: white;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 30px;
 }
 
 main {
@@ -388,24 +432,74 @@ main {
 }
 
 /* icono */
-header img {
-  margin-top: 10px;
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2% 0;
+}
+
+.header__img {
   margin-left: 40px;
-  height: 50px;
-  width: 200px;
+  width: 25%;
 }
 
-.newsArticle {
-  height: 100vh;
+.header div {
+  width: 50%;
+}
+
+.header nav {
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.newsletter {
+  width: 100%;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2%;
+  overflow: hidden;
+  background-image: url(/recursos/newsBg.png);
+  background-repeat: no-repeat;
+  background-size: 103% 100%;
 }
 
-.newsArticle img {
-  height: 600px;
+.newsletter__section2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 60%;
+}
+
+.newsletter__section2 .section__input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.3em;
+  padding: 15px 50px 10px 20px;
+  margin-right: 30px;
+  border-radius: 10px;
+  border-color: gray;
 }
 
 .vinilosArticle {
-  height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(32.65%, #1a799d), color-stop(132.93%, #000000));
   background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
   display: -webkit-box;
@@ -421,14 +515,37 @@ header img {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-.vinilosArticle .viniliosArticle__img {
-  height: 400px;
-  width: 400px;
+  padding-top: 2%;
+  padding-bottom: 8%;
 }
 
 .vinilosArticle h2 {
   color: white;
+}
+
+.vinilosArticle p {
+  padding-top: 2%;
+  text-align: center;
+  color: white;
+}
+
+.vinilosArticle__section {
+  padding-top: 5%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.vinilosArticle__section .viniliosArticle__img {
+  height: 700px;
+  width: 700px;
 }
 /*# sourceMappingURL=style.css.map */

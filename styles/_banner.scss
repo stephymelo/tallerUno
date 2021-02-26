@@ -1,70 +1,83 @@
-
 .navegacion {
-    position: absolute;
-    top: 30px;
-    right: 0;
-    width: 50%;
+  top: 30px;
+  right: 0;
+  width: 50%;
 }
 
 .navegacion ul {
-    color: white;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin-right: 10px;
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 10px;
 }
 
 .navegacion ul input {
-    opacity: 30%;
-    border-radius: 5px;
-    border-style: none;
-    margin-left: 10px;
+  opacity: 30%;
+  border-radius: 5px;
+  border-style: none;
+  margin-left: 10px;
 }
 
 .bannerSection {
-    color: white;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
+  color: white;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+  justify-content: center;
+  margin-left: 150px;
 }
 
 .bannerSection button {
-    color: white;
-    background-color: rgb(55, 158, 255);
-    width: 100px;
+  color: white;
+  background-color: rgb(55, 158, 255);
+  width:fit-content
 }
 
 .bannerSection h1 {
-    font-size: 40px;
+  font-size: 6em;
 }
 
 .bannerSection p {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 16px;
+  padding-top: 1.5%;
+  padding-bottom: 30px;
+  font-size: 1.4em;
 }
 
 .bannerSection button a {
-    color: white;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
+  padding:10px;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
 }
 
 main {
-    height: 100vh;
-    background-size: cover;
-    background-image: url(/recursos/banner.png);
-    position: relative;
+  height:100vh;  
+  background-size: cover;
+  background-image: url(/recursos/banner.png);
+  position: relative;
+ 
 }
 
 /* icono */
 
-header img {
-    margin-top: 10px;
+.header {
+  width: 100%;
+  display: flex;
+  padding: 2% 0;
+
+  &__img {
     margin-left: 40px;
-    height: 50px;
-    width: 200px;
+    width: 25%;
+  }
+
+  div{
+      width: 50%;
+  }
+  nav {
+    width: 50%;
+    font-size: 1.2em;
+  }
 }

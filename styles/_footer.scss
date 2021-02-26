@@ -1,10 +1,10 @@
 .footer {
-    height: 60vh;
+    height: 25vh;
     color: gray;
     background-color: #172631;
 
     .footer__main {
-        height: 50vh;
+        height: 80%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -17,10 +17,25 @@
 
         .footer__section {
             padding-right: 50px;
+            
+
+            h3{
+                font-size: 30px;
+                padding-bottom:20px;
+            }
+            p{
+                padding-top:20px;
+                
+            }
         }
 
         .footer__section1 {
             padding-right: 50px;
+
+            .footer__options li{
+                font-size:20px;
+                padding-top:10px;
+            }
         }
 
         .footer__section2 {
@@ -37,6 +52,7 @@
 .footer span {
     display: flex;
     justify-content: center;
+    padding-top:20px;
 }
 
 .footer p .icon {

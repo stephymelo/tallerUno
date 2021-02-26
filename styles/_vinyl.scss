@@ -1,17 +1,43 @@
 .vinilosArticle {
-    height: 100vh;
+   
     background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding-top:2%;
+    padding-bottom:8%;
 
-    .viniliosArticle__img {
-        height: 400px;
-        width: 400px;
-    }
 
     h2 {
         color: white;
     }
+
+    p{
+        padding-top:2%;
+        text-align: center;
+        color: white;
+    }
+    &__section{
+        padding-top:5%;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .viniliosArticle__img {
+                height: 700px;
+                width: 700px;
+            }
+            
+        
+        
+    }
+    
+
+    
+    
+
+   
+
 }

@@ -3,6 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top:2%;
+
+    h2{
+        color:white;
+    }
 
     &__menu {
         color: white;
@@ -12,13 +17,15 @@
         justify-content: space-evenly;
 
         li {
+            padding-top:30px;
             padding-left: 15%;
+            font-size:1.7em;
         }
     }
     &__container {
         width: 80%;
         margin: 2rem auto;
-        background-color: black;
+        
 
         .galeria {
             display: grid;

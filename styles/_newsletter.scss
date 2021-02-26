@@ -1,9 +1,41 @@
 
-.newsArticle {
-    height: 100vh;
+.newsletter {
+    width: 100%;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top:2%;
+    overflow: hidden;
+    background-image: url(/recursos/newsBg.png);
+    background-repeat: no-repeat;
+    background-size: 103% 100%;
 }
 
-.newsArticle img {
-    height: 600px;
+.newsletter__section1 {
+   
+
+
+    
+    
+}
+
+.newsletter__section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width:60%;
+   
+    
+    .section__input{
+        width: fit-content;
+        font-size: 1.3em;
+        padding:15px 50px 10px 20px;
+        margin-right:30px;
+       
+        
+        border-radius: 10px;
+        border-color:gray;
+    }
+   
 }
