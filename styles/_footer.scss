@@ -64,6 +64,21 @@
 @media screen and (max-width: 850px) {
     .footer{
         height: 45vh;
+        
+        .footer__main{
+            height: 80%;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            .footer__section{
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+        }
+        
 
     }
 

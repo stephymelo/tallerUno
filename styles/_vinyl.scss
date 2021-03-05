@@ -36,9 +36,30 @@
 }
 
 @media screen and (max-width: 850px) {
-    .vinilosArticle__section{
+    .vinilosArticle{
+        padding-top:40px;
+        align-content: center;
+        justify-content: center;
         flex-direction: column;
+        p{
+            padding-top:30px;
+            text-align: center;
+            color: white;
+        }
+
+        .vinilosArticle__section{
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+    
+            .viniliosArticle__img {
+                height: 300px;
+                width: 300px;
+            }
+        }
     }
+    
+   
 
     
 

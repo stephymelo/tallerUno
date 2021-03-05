@@ -35,10 +35,12 @@
 
         <section class="bannerSection">
             <h1 class="bannerSection__h1"><strong>Unfound</strong> Music</h1>
-            <p class="bannerSection__p">Alternative music from out worldly creators, digital soundtracks, vinyls, cd's and more for only
+            <p class="bannerSection__p">Alternative music from out worldly creators, digital soundtracks, vinyls, cd's
+                and more for only
                 $5.00 a month</p>
 
-            <button class="bannerSection__btn"><a class="bannerSection__btn__a" href="#subscribeSection">Subscribe</a></button>
+            <button class="bannerSection__btn"><a class="bannerSection__btn__a"
+                    href="#subscribeSection">Subscribe</a></button>
         </section>
     </main>
 
@@ -46,22 +48,22 @@
 
     <article class="vinilosArticle">
         <h2>New Vinyl Collection</h2>
-        <p>From your favorite house and synthwave artists, hand crafted and unique vinyls<br>
+        <p>From your favorite house and synthwave artists, hand crafted and unique vinyls.
             By subscribing, get 10% off on each vinyl purchase</p>
         <section class="vinilosArticle__section">
-            <figure class="vinilo"> 
+            <figure class="vinilo">
                 <img class="viniliosArticle__img" src="./recursos/albumone.png">
                 <p>Voyager "Gone" 2016</p>
             </figure>
-            <figure class="vinilo"> 
+            <figure class="vinilo">
                 <img class="viniliosArticle__img" src="./recursos/homealbum.jpg">
                 <p>Home "Odyssey" 2014</p>
             </figure>
-            <figure class="vinilo"> 
+            <figure class="vinilo">
                 <img class="viniliosArticle__img" src="./recursos/albumtwo.jpg">
                 <p>Forhill "Lost" 2015</p>
             </figure>
-            
+
         </section>
 
         <section class="vinilosArticle__section1">
@@ -92,6 +94,7 @@
         <section class="cancionesArticle__container">
 
             <section class="galeria">
+                <section class="galeria__item" >
                 <figure class="galeria__item galeria__item--1">
                     <img class="galeria__img" src="./recursos/albumtwo.jpg">
                 </figure>
@@ -111,10 +114,23 @@
                 <figure class="galeria__item galeria__item--5">
                     <img class="galeria__img" src="./recursos/albumeight.png">
                 </figure>
+            </section>
 
-                <figure class="galeria__item galeria__item--6">
+            <section class="galeria__item2">
+
+                <figure class="galeria__item2 galeria__item2--6">
                     <img class="galeria__img" src="./recursos/albumfour.png">
                 </figure>
+                
+                <figure class="galeria__item2 galeria__item2--7">
+                    <img class="galeria__img" src="./recursos/albumnine.png">
+                </figure>
+                
+                <figure class="galeria__item2 galeria__item2--8">
+                    <img class="galeria__img" src="./recursos/albumten.png">
+                </figure>
+
+            </section>
 
             </section>
 
@@ -132,10 +148,13 @@
         <section class="subscribe__section">
             <section class="subscribe__article">
                 <h4>Monthy Plan</h4>
-                <ol>
-                    <li><img class="subscribe__icons" src="./recursos/discountIcon.png">Exclusive Discounts</li>
-                    <li><img class="subscribe__icons" src="./recursos/musicIcon.png">Free downloads monthly</li>
-                </ol>
+                <section class="subscribe__ol">
+                    <ol>
+                        <li><img class="subscribe__icons" src="./recursos/discountIcon.png">Exclusive Discounts</li>
+                        <li><img class="subscribe__icons" src="./recursos/musicIcon.png">Free downloads monthly</li>
+
+                    </ol>
+            </section>
                 <p>$6.00 per month</p>
                 <button>Subscribe</button>
             </section>
@@ -143,31 +162,34 @@
 
             <section class="subscribe__article">
                 <h4>Yearly Plan</h4>
-                <ol>
-                    <li><img class="subscribe__icons" src="./recursos/discountIcon.png">Exclusive Discounts</li>
-                    <li><img class="subscribe__icons" src="./recursos/musicIcon.png">Free downloads monthly</li>
-                    <li><img class="subscribe__icons" src="./recursos/unicornIcon.png">Backstage content</li>
-                    <li><img class="subscribe__icons" src="./recursos/vinylIcon.png">Yearly vinyl set</li>
-                </ol>
+                <section class="subscribe__ol">
+                    <ol>
+                        <li><img class="subscribe__icons" src="./recursos/discountIcon.png">Exclusive Discounts</li>
+                        <li><img class="subscribe__icons" src="./recursos/musicIcon.png">Free downloads monthly</li>
+                        <li><img class="subscribe__icons" src="./recursos/unicornIcon.png">Backstage content</li>
+                        <li><img class="subscribe__icons" src="./recursos/vinylIcon.png">Yearly vinyl set</li>
+                    </ol>
+                </section>
                 <p>$5.00 per month</p>
                 <button>Subscribe</button>
             </section>
         </section>
-        
-      
-      
+
+
+
     </article>
 
     <!--Seccion Join-->
 
     <article class="joinArticle">
-        
+
+        <section class="joinArticle__section">
             <h2>Join and start selling</h2>
             <p>Become part of the bandi community and start selling your work to the world</p>
-            <img class="joinArticle__img" src="./recursos/djguy.png">
+            <img class="joinArticle__section__img" src="./recursos/djguy.png">
             <button>Join now</button>
-    
-        
+        </section>
+
     </article>
 
     <!--Seccion Newsletter-->
@@ -180,26 +202,26 @@
         <section class="newsletter__section2">
             <div>
                 <h2>Know when your favorite artist releases</h2>
-                <p>Subscribe to the Bandicamp newsletter to recieve discounts, information on the artists you follow,<br>and
+                <p>Subscribe to the Bandicamp newsletter to recieve discounts, information on the artists you follow,and
                     exclusive content</p>
             </div>
-          
-                <div>
-                    <input class="section__input" type="text" placeholder="name"></input>
-                    <input class="section__input" type="text" placeholder="email"></input>
-                    <button class="">Subscribe now</button>
 
-                </div>
-          
+            <div>
+                <input class="section__input" type="text" placeholder="name"></input>
+                <input class="section__input" type="text" placeholder="email"></input>
+                <button class="section__button">Subscribe now</button>
+
+            </div>
+
 
 
 
 
         </section>
 
-       
 
-            
+
+
 
     </article>
 
