@@ -51,17 +51,20 @@ a:hover {
 
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     body{
         
         h2 {
-            font-size: 30px;
+            font-size: 36px;
             font-weight: 600;
         }
 
         p{
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 400;
+        }
+        button{
+            font-size: 18px;
         }
 
     }

@@ -61,7 +61,7 @@
     padding-right: 10px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     .footer{
         height: 45vh;
         
@@ -73,12 +73,32 @@
             .footer__section{
                 flex-wrap: wrap;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .footer__section--1{
+                    margin-top:50px;
+                    display: flex;
+                    flex-direction: row;
+
+                    p{
+                        margin-right:20px;
+                    }
+
+                }
             }
 
         }
-        
+        .footer__section1 {
+            padding-right: 50px;
+
+            .footer__options li{
+                font-size:20px;
+                text-align: center;
+                padding-top:10px;
+            }
+        }
 
     }
 

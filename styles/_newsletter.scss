@@ -41,7 +41,14 @@
    
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
+    .newsletter__section1{
+        img{
+            width:70%;
+        }
+    }
+
+
     .newsletter__section2 {
         display: flex;
         flex-direction: column;

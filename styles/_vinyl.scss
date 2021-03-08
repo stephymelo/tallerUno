@@ -35,13 +35,15 @@
     
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     .vinilosArticle{
         padding-top:40px;
         align-content: center;
         justify-content: center;
         flex-direction: column;
         p{
+            margin-right:15px;
+            margin-left:15px;
             padding-top:30px;
             text-align: center;
             color: white;
@@ -51,6 +53,13 @@
             align-content: center;
             justify-content: center;
             flex-direction: column;
+            
+            .vinilo{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top:20px;
+            }
     
             .viniliosArticle__img {
                 height: 300px;

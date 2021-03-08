@@ -83,17 +83,16 @@ main {
 
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   main {
     height: 100vh;
-    width:100%;
-    background-size: cover;
-    background-position: 93% 50%;
-    background-image: url(/recursos/banner.png);
+    width:100%; 
+    background-position: 90% 100%;
     position: relative;
   
     .header {
       .navegacion {
+        display: none;
       }
     }
 
@@ -104,20 +103,21 @@ main {
       padding: 20% 0;
 
       &__h1 {
-        font-size: 50px;
+        font-size: 70px;
       }
       &__p {
-        font-size: 18px;
+        font-size: 28px;
         margin-right:200px;
       }
 
       &__btn{
+       
         
         
 
         &__a{
           padding: 5px;
-          font-size: 20px;
+          font-size: 30px;
 
         }
       }
