@@ -23,7 +23,7 @@ main {
       top: 30px;
       right: 0;
       width: 50%;
-      font-size: 30px;
+      font-size: 16px;
     }
 
     .navegacion ul {
@@ -52,15 +52,15 @@ main {
     margin-left: 150px;
 
     &__h1 {
-      font-size: 100px;
+      font-size: 50px;
       font-weight: 400;
     }
 
     &__p {
       padding-top: 1.5%;
       padding-bottom: 30px;
-      font-size: 35px;
-      margin-right: 80%;
+      font-size: 18px;
+      margin-right: 70%;
     }
 
     &__btn {
@@ -69,11 +69,11 @@ main {
       width: fit-content;
 
       &__a {
-        padding: 10px;
+       
         color: white;
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
-        font-size: 40px;
+        font-size: 20px;
       }
     }
   }
@@ -85,7 +85,7 @@ main {
 
 @media screen and (max-width: 1000px) {
   main {
-    height: 100vh;
+    height: 80vh;
     width:100%; 
     background-position: 90% 100%;
     position: relative;
@@ -103,10 +103,10 @@ main {
       padding: 20% 0;
 
       &__h1 {
-        font-size: 70px;
+        font-size: 24px;
       }
       &__p {
-        font-size: 28px;
+        font-size: 12px;
         margin-right:200px;
       }
 
@@ -117,7 +117,7 @@ main {
 
         &__a{
           padding: 5px;
-          font-size: 30px;
+          font-size: 14px;
 
         }
       }

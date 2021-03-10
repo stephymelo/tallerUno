@@ -7,11 +7,11 @@ body {
 
 
     h2 {
-        font-size: 65px;
+        font-size: 32px;
         font-weight: 600;
     }
     p {
-        font-size: 32px;
+        font-size: 18px;
         font-weight: 400;
       
     }
@@ -21,9 +21,9 @@ body {
         background-color: rgb(255, 162, 55);
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
-        font-size: 36px;
+        font-size: 18px;
         border-radius: 5px;
-        padding: 20px 50px 20px 50px;
+        padding: 10px 40px 10px 40px;
         border-style: none;
         width: fit-content;
     }
@@ -55,16 +55,17 @@ a:hover {
     body{
         
         h2 {
-            font-size: 36px;
+            font-size: 20px;
             font-weight: 600;
         }
 
         p{
-            font-size: 20px;
+            font-size: 10px;
             font-weight: 400;
         }
         button{
-            font-size: 18px;
+            font-size: 14px;
+            padding: 5px 20px 5px 20px;
         }
 
     }
