@@ -1,27 +1,35 @@
-let itemsGaleria = document.querySelector('.galeria__item');
-const playIcon = document.querySelector('.galeria__icon');
+const itemsGaleria = document.querySelectorAll('.galeria__item');
+const itemsMusic = document.querySelectorAll('.galeria__music');
 const slider = document.querySelector('.carrousel__slider');
+const itemsIcon  = document.querySelectorAll('.galeria__icon');
+const galeria = document.querySelector('.galeria');
 
 for(let i = 0; i < itemsGaleria.length; i++){
-    const item = itemsGaleria[i];
-    console.log(item);
 
 
-function playMusic(){
-    
-
-}
 
 function showPlayer(){
-    if(playIcon.style.display === "none"){
-        playIcon.style.display === "block";
+    // console.log(itemsIcon.values);
+
+    for(let i = 0; i < itemsMusic.length; i++){
+        console.log("hola");
+        const music = itemsMusic[i];
+        if(music.style.display === "none"){
+            music.style.display == "block";
+        }
     }
-
 }
 
-item.addEventListener('click',showPlayer);
+for (let index = 0; index < itemsIcon.length; index++) {
+    itemsIcon[i].addEventListener('click',showPlayer);
 
 }
+    
+}
+
+
+
+// SLIDER
 
 let currentSlide = 0;
 
@@ -56,7 +64,7 @@ handleMouseEnter();
 
 
 
-//Responsive js
+//Responsive js burgermenu
 let burgerMenu = document.querySelector('.burgerMenu');
 let navegacion = document.querySelector('.navegacion');
 

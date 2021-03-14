@@ -531,7 +531,8 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
+  display: block;
+  opacity: 0;
 }
 
 .cancionesArticle .galeria__music {
@@ -545,6 +546,7 @@ a:hover {
 }
 
 .cancionesArticle .galeria__music p {
+  font-size: 14px;
   color: white;
 }
 
@@ -554,15 +556,10 @@ a:hover {
 
 .cancionesArticle .galeria__item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: 50%;
+}
+
+.cancionesArticle .galeria__item:hover .galeria__icon {
+  opacity: 1;
 }
 
 .cancionesArticle .galeria__item--1 {
@@ -593,7 +590,23 @@ a:hover {
   width: 20%;
 }
 
-.cancionesArticle .galeria__item2 {
+.cancionesArticle .galeria__item--6 {
+  margin-right: 70px;
+  width: 19.72%;
+}
+
+.cancionesArticle .galeria__item--7 {
+  margin-top: 45px;
+  width: 55%;
+}
+
+.cancionesArticle .galeria__item--8 {
+  margin-left: 80px;
+  width: 30%;
+}
+
+.cancionesArticle .galeria__section {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,21 +616,6 @@ a:hover {
           flex-direction: row;
   width: 100%;
   height: 50%;
-}
-
-.cancionesArticle .galeria__item2--6 {
-  margin-right: 70px;
-  width: 19.72%;
-}
-
-.cancionesArticle .galeria__item2--7 {
-  margin-top: 45px;
-  width: 55%;
-}
-
-.cancionesArticle .galeria__item2--8 {
-  margin-left: 80px;
-  width: 30%;
 }
 
 @media screen and (max-width: 1000px) {
