@@ -43,7 +43,7 @@
 
     &__icon {
       position: absolute;
-      width: 50px;
+      width: 30px;
       top: 40%;
       left: 45%;
       align-items: center;
@@ -54,7 +54,8 @@
 
     &__music {
       position: absolute;
-      height: 100%;
+      top:0;
+      height: 110%;
       width: 100%;
       background-color: rgba(30, 10, 23, 0.404);
       padding-top: 10px;
@@ -64,6 +65,14 @@
       p {
         font-size:14px;
         color: white;
+      }
+      .buy{
+        margin-bottom:5px;
+        opacity:50%;
+        position: absolute;
+        bottom:0;
+
+       
       }
     }
 
@@ -80,7 +89,7 @@
       }
       
       &--1 {
-        margin-bottom: 30px;
+        
         width: 20%;
       }
       &--2 {
@@ -89,12 +98,14 @@
         width: 27.9%;
       }
       &--3 {
-        margin-top: 60px;
+        margin-bottom: 10px;
+        margin-top: 30px;
         margin-left: 50px;
         width: 15%;
       }
       &--4 {
-        margin-top: 60px;
+        margin-bottom: 10px;
+        margin-top: 30px;
         margin-left: 50px;
         width: 15%;
       }
@@ -103,14 +114,16 @@
         width: 20%;
       }
       &--6 {
+        margin-top:40px;
         margin-right: 70px;
-        width: 19.72%;
+        width: 20%;
       }
       &--7 {
-        margin-top: 45px;
-        width: 55%;
+        margin-top: 65px;
+        width: 50%;
       }
       &--8 {
+        margin-top:40px;
         margin-left: 80px;
         width: 30%;
       }
@@ -159,65 +172,95 @@
       flex-wrap: wrap;
       flex-direction: column;
       justify-content: space-evenly;
-
+  
+      &__icon {
+        position: absolute;
+        width: 30px;
+        top: 40%;
+        left: 45%;
+        align-items: center;
+        display: block;
+        opacity: 0;
+        
+      }
+  
+      &__music {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(30, 10, 23, 0.404);
+        padding-top: 3px;
+        padding-left: 7px;
+        display:block;
+       
+  
+        p {
+          font-size:14px;
+          color: white;
+        }
+      }
+  
       &__img {
         width: 100%;
       }
-
-      &__item {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 70%;
-
+  
+      &__item{
+        position: relative;
+        &:hover{
+          & .galeria__icon{
+            opacity: 1;
+          }
+        }
+        
         &--1 {
-          padding-bottom: 30px;
-
+          margin-bottom: 50px;
           width: 20%;
         }
         &--2 {
-          padding-left: 10px;
-          padding-right: 4px;
+          margin-left: 5px;
+          margin-right: 4px;
           width: 27.9%;
         }
         &--3 {
-          padding-top: 20px;
-          padding-left: 10px;
+          margin-top: 6px;
+          margin-left: 5px;
           width: 15%;
         }
         &--4 {
-          padding-top: 20px;
-          padding-left: 10px;
+          margin-top: 6px;
+          margin-left: 5px;
           width: 15%;
         }
         &--5 {
-          padding-left: 30px;
+          margin-left: 3px;
           width: 20%;
         }
-        &__img {
-          width: 100%;
+        &--6 {
+          margin-right: 7px;
+          width: 19.72%;
         }
+        &--7 {
+          margin-top: 4px;
+          width: 55%;
+        }
+        &--8 {
+          margin-left: 8px;
+          width: 30%;
+        }
+      
       }
-
-      &__item2 {
+      &__section {
+        position: relative;
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 50%;
-
-        &--6 {
-          padding-right: 20px;
-          width: 19.72%;
-        }
-        &--7 {
-          padding-top: 10px;
-          width: 40%;
-        }
-        &--8 {
-          padding-left: 10px;
-          width: 30%;
-        }
+  
       }
+  
+     
     }
+    
+    
   }
 }

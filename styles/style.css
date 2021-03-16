@@ -355,14 +355,17 @@ a:hover {
             flex-direction: column;
   }
   .subscribe__section .subscribe__article {
-    height: 60%;
+    height: 30%;
     width: 50%;
+  }
+  .subscribe__section .subscribe__article--1 .subscribe__ol {
+    margin-top: 0px;
   }
   .subscribe__section .subscribe__article--2 {
     margin-top: 40px;
   }
   .subscribe__section .subscribe__article .subscribe__icons {
-    width: 10%;
+    width: 30%;
     padding-right: 10%;
   }
   .subscribe__section .subscribe__article li {
@@ -377,7 +380,10 @@ a:hover {
     font-weight: 500;
     font-size: 12px;
     color: #105966;
-    padding-top: 20%;
+    padding-top: 10px;
+  }
+  .subscribe__section .subscribe__article button {
+    margin-top: 15px;
   }
 }
 
@@ -525,7 +531,7 @@ a:hover {
 
 .cancionesArticle .galeria__icon {
   position: absolute;
-  width: 50px;
+  width: 30px;
   top: 40%;
   left: 45%;
   -webkit-box-align: center;
@@ -537,7 +543,8 @@ a:hover {
 
 .cancionesArticle .galeria__music {
   position: absolute;
-  height: 100%;
+  top: 0;
+  height: 110%;
   width: 100%;
   background-color: rgba(30, 10, 23, 0.404);
   padding-top: 10px;
@@ -548,6 +555,13 @@ a:hover {
 .cancionesArticle .galeria__music p {
   font-size: 14px;
   color: white;
+}
+
+.cancionesArticle .galeria__music .buy {
+  margin-bottom: 5px;
+  opacity: 50%;
+  position: absolute;
+  bottom: 0;
 }
 
 .cancionesArticle .galeria__img {
@@ -563,7 +577,6 @@ a:hover {
 }
 
 .cancionesArticle .galeria__item--1 {
-  margin-bottom: 30px;
   width: 20%;
 }
 
@@ -574,13 +587,15 @@ a:hover {
 }
 
 .cancionesArticle .galeria__item--3 {
-  margin-top: 60px;
+  margin-bottom: 10px;
+  margin-top: 30px;
   margin-left: 50px;
   width: 15%;
 }
 
 .cancionesArticle .galeria__item--4 {
-  margin-top: 60px;
+  margin-bottom: 10px;
+  margin-top: 30px;
   margin-left: 50px;
   width: 15%;
 }
@@ -591,16 +606,18 @@ a:hover {
 }
 
 .cancionesArticle .galeria__item--6 {
+  margin-top: 40px;
   margin-right: 70px;
-  width: 19.72%;
+  width: 20%;
 }
 
 .cancionesArticle .galeria__item--7 {
-  margin-top: 45px;
-  width: 55%;
+  margin-top: 65px;
+  width: 50%;
 }
 
 .cancionesArticle .galeria__item--8 {
+  margin-top: 40px;
   margin-left: 80px;
   width: 30%;
 }
@@ -656,47 +673,76 @@ a:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .cancionesArticle .galeria__icon {
+    position: absolute;
+    width: 30px;
+    top: 40%;
+    left: 45%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: block;
+    opacity: 0;
+  }
+  .cancionesArticle .galeria__music {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(30, 10, 23, 0.404);
+    padding-top: 3px;
+    padding-left: 7px;
+    display: block;
+  }
+  .cancionesArticle .galeria__music p {
+    font-size: 14px;
+    color: white;
+  }
   .cancionesArticle .galeria__img {
     width: 100%;
   }
   .cancionesArticle .galeria__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    height: 70%;
+    position: relative;
+  }
+  .cancionesArticle .galeria__item:hover .galeria__icon {
+    opacity: 1;
   }
   .cancionesArticle .galeria__item--1 {
-    padding-bottom: 30px;
+    margin-bottom: 50px;
     width: 20%;
   }
   .cancionesArticle .galeria__item--2 {
-    padding-left: 10px;
-    padding-right: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
     width: 27.9%;
   }
   .cancionesArticle .galeria__item--3 {
-    padding-top: 20px;
-    padding-left: 10px;
+    margin-top: 6px;
+    margin-left: 5px;
     width: 15%;
   }
   .cancionesArticle .galeria__item--4 {
-    padding-top: 20px;
-    padding-left: 10px;
+    margin-top: 6px;
+    margin-left: 5px;
     width: 15%;
   }
   .cancionesArticle .galeria__item--5 {
-    padding-left: 30px;
+    margin-left: 3px;
     width: 20%;
   }
-  .cancionesArticle .galeria__item__img {
-    width: 100%;
+  .cancionesArticle .galeria__item--6 {
+    margin-right: 7px;
+    width: 19.72%;
   }
-  .cancionesArticle .galeria__item2 {
+  .cancionesArticle .galeria__item--7 {
+    margin-top: 4px;
+    width: 55%;
+  }
+  .cancionesArticle .galeria__item--8 {
+    margin-left: 8px;
+    width: 30%;
+  }
+  .cancionesArticle .galeria__section {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -706,18 +752,6 @@ a:hover {
             flex-direction: row;
     width: 100%;
     height: 50%;
-  }
-  .cancionesArticle .galeria__item2--6 {
-    padding-right: 20px;
-    width: 19.72%;
-  }
-  .cancionesArticle .galeria__item2--7 {
-    padding-top: 10px;
-    width: 40%;
-  }
-  .cancionesArticle .galeria__item2--8 {
-    padding-left: 10px;
-    width: 30%;
   }
 }
 
@@ -1020,7 +1054,7 @@ main .burgerMenu {
 
 .vinilos .carrousel {
   margin-top: 5%;
-  width: 1500px;
+  width: 1200px;
   margin-left: 100px;
   height: 400px;
   overflow: hidden;
@@ -1049,10 +1083,10 @@ main .burgerMenu {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   height: 100%;
-  width: 500px;
+  width: 450px;
   -o-object-fit: cover;
      object-fit: cover;
-  padding-right: 40px;
+  margin-right: 40px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1077,7 +1111,7 @@ main .burgerMenu {
   }
   .vinilos .carrousel {
     margin-top: 5%;
-    width: 470px;
+    width: 300px;
     margin-left: 0px;
     height: 300px;
     overflow: hidden;
@@ -1104,10 +1138,10 @@ main .burgerMenu {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     height: 100%;
-    width: 470px;
+    width: 300px;
     -o-object-fit: cover;
        object-fit: cover;
-    padding-right: 0px;
+    margin-right: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

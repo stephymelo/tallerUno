@@ -4,28 +4,29 @@ const slider = document.querySelector('.carrousel__slider');
 const itemsIcon  = document.querySelectorAll('.galeria__icon');
 const galeria = document.querySelector('.galeria');
 
-for(let i = 0; i < itemsGaleria.length; i++){
+
 
 
 
 function showPlayer(){
-    // console.log(itemsIcon.values);
+    // console.log([p;0itemsIcon.values);
 
     for(let i = 0; i < itemsMusic.length; i++){
         console.log("hola");
         const music = itemsMusic[i];
         if(music.style.display === "none"){
+            console.log("display");
             music.style.display == "block";
         }
     }
 }
 
 for (let index = 0; index < itemsIcon.length; index++) {
-    itemsIcon[i].addEventListener('click',showPlayer);
+    itemsIcon[index].addEventListener('click',showPlayer);
 
 }
     
-}
+
 
 
 
@@ -39,10 +40,15 @@ function handleInterval(){
       
     currentSlide = 0;
   }
-    slider.style.transform = `translate(-${ (slider.clientWidth/3) * currentSlide }px, 0px)`;
+    slider.style.transform = `translate(-${ (slider.clientWidth/2) * currentSlide }px, 0px)`;
 
     var width = window.innerWidth;
     if(width<=1000){
+        if(currentSlide >= slider.children.length){
+      
+            currentSlide = 0;
+          }
+       
         slider.style.transform = `translate(-${ slider.clientWidth * currentSlide }px, 0px)`;
 
     }
