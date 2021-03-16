@@ -1,31 +1,60 @@
 const itemsGaleria = document.querySelectorAll('.galeria__item');
 const itemsMusic = document.querySelectorAll('.galeria__music');
+const itemsAudio = document.querySelectorAll('.galeria__audio');
 const slider = document.querySelector('.carrousel__slider');
-const itemsIcon  = document.querySelectorAll('.galeria__icon');
+const itemsIcon  = document.querySelectorAll('.galeria__playbtn');
+const itemsPause  = document.querySelectorAll('.galeria__pausebtn');
 const galeria = document.querySelector('.galeria');
+let musicOn=false;
 
 
-
-
-
-function showPlayer(){
-    // console.log([p;0itemsIcon.values);
-
-    for(let i = 0; i < itemsMusic.length; i++){
-        console.log("hola");
-        const music = itemsMusic[i];
-        if(music.style.display === "none"){
-            console.log("display");
-            music.style.display == "block";
-        }
-    }
-}
 
 for (let index = 0; index < itemsIcon.length; index++) {
+
+    function showPlayer(){
+        console.log("hola");
+        const music = itemsMusic[index];
+        const audio = itemsAudio[index];
+        music.style.display = "block";
+        musicOn=true;
+        audio.play();
+        itemsIcon[index].style.opacity = "0";
+
+      
+
+
+         
+    }
+
+
     itemsIcon[index].addEventListener('click',showPlayer);
 
 }
-    
+
+for (let index = 0; index < itemsPause.length; index++) {
+
+    function stopMusic(){
+        console.log("holados");
+        const music = itemsMusic[index];
+        const audio = itemsAudio[index];
+        music.style.display = "none";
+        itemsIcon[index].style.opacity = "1";
+        
+        
+        audio.pause();
+
+      
+
+
+         
+    }
+
+
+    itemsPause[index].addEventListener('click',stopMusic);
+
+}
+        
+
 
 
 

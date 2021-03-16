@@ -41,7 +41,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 
-    &__icon {
+    &__playbtn {
       position: absolute;
       width: 30px;
       top: 40%;
@@ -52,6 +52,21 @@
       
     }
 
+    &__pausebtn {
+      position: absolute;
+      width: 30px;
+      top: 40%;
+      left: 45%;
+      align-items: center;
+      display: block;
+      opacity: 0;
+      
+    }
+
+
+
+    
+
     &__music {
       position: absolute;
       top:0;
@@ -61,6 +76,11 @@
       padding-top: 10px;
       padding-left: 15px;
       display: none;
+      &:hover{
+        & .galeria__pausebtn{
+          opacity: 1;
+        }
+      }
 
       p {
         font-size:14px;
@@ -83,7 +103,7 @@
     &__item{
       position: relative;
       &:hover{
-        & .galeria__icon{
+        & .galeria__playbtn{
           opacity: 1;
         }
       }

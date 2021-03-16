@@ -529,7 +529,19 @@ a:hover {
           justify-content: space-evenly;
 }
 
-.cancionesArticle .galeria__icon {
+.cancionesArticle .galeria__playbtn {
+  position: absolute;
+  width: 30px;
+  top: 40%;
+  left: 45%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+  opacity: 0;
+}
+
+.cancionesArticle .galeria__pausebtn {
   position: absolute;
   width: 30px;
   top: 40%;
@@ -552,6 +564,10 @@ a:hover {
   display: none;
 }
 
+.cancionesArticle .galeria__music:hover .galeria__pausebtn {
+  opacity: 1;
+}
+
 .cancionesArticle .galeria__music p {
   font-size: 14px;
   color: white;
@@ -572,7 +588,7 @@ a:hover {
   position: relative;
 }
 
-.cancionesArticle .galeria__item:hover .galeria__icon {
+.cancionesArticle .galeria__item:hover .galeria__playbtn {
   opacity: 1;
 }
 
