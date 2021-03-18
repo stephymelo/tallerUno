@@ -2,51 +2,52 @@ const itemsGaleria = document.querySelectorAll('.galeria__item');
 const itemsMusic = document.querySelectorAll('.galeria__music');
 const itemsAudio = document.querySelectorAll('.galeria__audio');
 const slider = document.querySelector('.carrousel__slider');
-const itemsIcon  = document.querySelectorAll('.galeria__playbtn');
+const itemsPlay  = document.querySelectorAll('.galeria__playbtn');
 const itemsPause  = document.querySelectorAll('.galeria__pausebtn');
 const galeria = document.querySelector('.galeria');
 let musicOn=false;
 
 
 
-for (let index = 0; index < itemsIcon.length; index++) {
+for (let index = 0; index < itemsPlay.length; index++) {
+    const music = itemsMusic[index];
+    const audio = itemsAudio[index];
 
     function showPlayer(){
-        console.log("hola");
-        const music = itemsMusic[index];
-        const audio = itemsAudio[index];
         music.style.display = "block";
-        musicOn=true;
         audio.play();
-        itemsIcon[index].style.opacity = "0";
 
+        if(!audio.paused){
+            itemsPlay[index].style.display = "none";
+            console.log("alo");
+        }
       
-
-
-         
     }
 
+   
+    console.log(audio.paused);
+    
+    
 
-    itemsIcon[index].addEventListener('click',showPlayer);
+    itemsPlay[index].addEventListener('click',showPlayer);
 
 }
 
+console.log("holi");
+
+
+
 for (let index = 0; index < itemsPause.length; index++) {
+    const music = itemsMusic[index];
+    const audio = itemsAudio[index];
 
     function stopMusic(){
-        console.log("holados");
-        const music = itemsMusic[index];
-        const audio = itemsAudio[index];
         music.style.display = "none";
-        itemsIcon[index].style.opacity = "1";
-        
-        
-        audio.pause();
-
-      
-
-
-         
+        audio.pause();  
+        if(audio.paused){
+            itemsPlay[index].style.display = "block";
+            
+        } 
     }
 
 
