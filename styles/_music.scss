@@ -195,7 +195,7 @@
 @media screen and (max-width: 1000px) {
   .cancionesArticle {
     width: 100%;
-    overflow: scroll;
+    
     padding-top: 40px;
 
     &__rectangle{
@@ -204,7 +204,7 @@
     
     &__container--1 {
       
-      position:absolute;
+      
       
       
       h2 {
@@ -222,10 +222,11 @@
     }
 
     &__container--2 {
-      width: fit-content;
+      width:100%;
       margin: 5px auto;
       margin-top:50px;
       margin-left:20px;
+      overflow: scroll;
     }
 
     .galeria {

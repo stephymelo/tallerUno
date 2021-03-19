@@ -30,7 +30,7 @@
   &__bg {
     position: absolute;
     z-index: -1;
-    left: 350px;
+    left: 150px;
     top: 140px;
     width: 500px;
     height: 100%;
@@ -41,9 +41,9 @@
   &__bgblue {
     position: absolute;
     z-index: -1;
-    left: 1060px;
+    left: 780px;
     top: 400px;
-    width: 500px;
+    width: 400px;
     height: 100%;
     background-image: url("../recursos/subscribeBG2.png");
     background-repeat: no-repeat;
@@ -79,7 +79,8 @@
   
       li {
         font-size: 18px;
-        padding-top: 10%;;
+        padding-top: 10px;
+        
         
       
       }
@@ -92,6 +93,8 @@
       }
   
       .subscribe__icons {
+        width: 20%;
+        
         margin-right:30px;
       }
   
