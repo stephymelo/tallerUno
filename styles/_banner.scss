@@ -89,7 +89,7 @@ main {
 
 @media screen and (max-width: 1000px) {
   main {
-    height: 80vh;
+    height: 90vh;
     width:100%; 
     background-position: 90% 100%;
     position: relative;
@@ -140,12 +140,14 @@ main {
       }
 
       &__btn{
+        padding: 5px;
+        
        
         
         
 
         &__a{
-          padding: 5px;
+          padding: 15px;
           font-size: 14px;
 
         }
