@@ -1,5 +1,5 @@
 .vinilos {
-   
+    position:relative;
     background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
     display: flex;
     flex-direction: column;
@@ -16,6 +16,16 @@
         padding-top:2%;
         text-align: center;
         color: white;
+    }
+
+    &__rectangle{
+        height:200px;
+        width:100%;
+        background: #172631;
+        opacity:60%;
+        position:absolute;
+        bottom:0;
+      
     }
 
     

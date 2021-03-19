@@ -66,22 +66,18 @@ var width = window.innerWidth;
                 music.style.display = "block";
                 audio.play();
 
-            }else if(!audio.paused && musicOn==true){
+            } if(!audio.paused && musicOn==true){
                 music.style.display = "none";
                 musicOn=false;
                 audio.pause();
 
             }
            
-
         }
 
     }
        
             itemsGaleria[index].addEventListener('click', playMusic);
-       
-           
-
         
 }
 

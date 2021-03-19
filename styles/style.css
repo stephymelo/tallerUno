@@ -236,6 +236,7 @@ a:hover {
           justify-content: space-evenly;
   background: url("../recursos/vinyl.png") right bottom no-repeat, url("../recursos/tape.png") center left no-repeat;
   background-size: 20%;
+  position: relative;
 }
 
 .subscribe h2 {
@@ -258,16 +259,38 @@ a:hover {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 70%;
+  margin-top: 40px;
   padding-top: 50px;
   padding-bottom: 100px;
   width: 100%;
 }
 
-.subscribe__section .subscribe__article {
+.subscribe__bg {
+  position: absolute;
+  z-index: -1;
+  left: 350px;
+  top: 140px;
+  width: 500px;
+  height: 100%;
+  background-image: url("../recursos/subscribeBG.png");
+  background-repeat: no-repeat;
+}
+
+.subscribe__bgblue {
+  position: absolute;
+  z-index: -1;
+  left: 1060px;
+  top: 400px;
+  width: 500px;
+  height: 100%;
+  background-image: url("../recursos/subscribeBG2.png");
+  background-repeat: no-repeat;
+}
+
+.subscribe__article {
   width: 25%;
   padding-left: 2%;
   padding-right: 2%;
-  padding-bottom: 4%;
   padding-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,46 +311,57 @@ a:hover {
           box-shadow: -4px 4px 10px 3px rgba(0, 0, 0, 0.25), 10px 10px 10px 3px rgba(0, 0, 0, 0.25);
 }
 
-.subscribe__section .subscribe__article--1 .subscribe__ol {
-  margin-top: 120px;
-}
-
-.subscribe__section .subscribe__article h4 {
+.subscribe__article h4 {
   font-weight: 700;
   font-size: 24px;
 }
 
-.subscribe__section .subscribe__article .subscribe__ol {
+.subscribe__article .subscribe__ol {
   height: 50%;
 }
 
-.subscribe__section .subscribe__article ol {
+.subscribe__article ol {
   list-style: none;
-  width: 100%;
+  text-align: left;
 }
 
-.subscribe__section .subscribe__article li {
-  padding-top: 10%;
-  padding-left: 10%;
+.subscribe__article li {
   font-size: 18px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  padding-top: 10%;
 }
 
-.subscribe__section .subscribe__article p {
-  font-weight: 500;
+.subscribe__article p {
+  font-weight: 700;
   font-size: 20px;
   color: #105966;
-  padding-top: 20%;
+  padding-top: 20px;
 }
 
-.subscribe__section .subscribe__article .subscribe__icons {
-  padding-right: 10%;
+.subscribe__article .subscribe__icons {
+  margin-right: 30px;
 }
 
-.subscribe__section .subscribe__article button {
-  margin-top: 80px;
+.subscribe__article button {
+  margin-top: 60px;
+  margin-bottom: 85px;
+}
+
+.subscribe__article--1 .subscribe__ol {
+  margin-top: 120px;
+}
+
+.subscribe__article--1 button {
+  color: white;
+}
+
+.subscribe__article--2 p {
+  margin-top: 50px;
+}
+
+.subscribe__article--2 button {
+  margin-bottom: 85px;
+  color: white;
+  background: #1a799d;
 }
 
 @media screen and (max-width: 1000px) {
@@ -354,36 +388,58 @@ a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .subscribe__section .subscribe__article {
+  .subscribe__bg {
+    left: 150px;
+    top: 140px;
+    background-size: 250px;
+  }
+  .subscribe__bgblue {
+    left: 80px;
+    top: 650px;
+    background-size: 250px;
+  }
+  .subscribe__article {
     height: 30%;
     width: 50%;
   }
-  .subscribe__section .subscribe__article--1 .subscribe__ol {
-    margin-top: 0px;
+  .subscribe__article--1 .subscribe__ol {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
-  .subscribe__section .subscribe__article--2 {
+  .subscribe__article--2 {
     margin-top: 40px;
   }
-  .subscribe__section .subscribe__article .subscribe__icons {
-    width: 20%;
+  .subscribe__article--2 button {
+    color: white;
+    background: #1a799d;
+  }
+  .subscribe__article .subscribe__icons {
+    width: 15%;
     margin-right: 10px;
   }
-  .subscribe__section .subscribe__article li {
+  .subscribe__article h4 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 18px;
+  }
+  .subscribe__article li {
     padding-top: 10%;
-    padding-left: 10%;
+    padding-left: 32px;
     font-size: 10px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
-  .subscribe__section .subscribe__article p {
-    font-weight: 500;
+  .subscribe__article p {
+    font-weight: 600;
     font-size: 12px;
-    color: #105966;
-    padding-top: 10px;
+    margin-top: 10px;
   }
-  .subscribe__section .subscribe__article button {
+  .subscribe__article button {
     margin-top: 15px;
+    margin-bottom: 40px;
   }
 }
 
@@ -413,6 +469,7 @@ a:hover {
 }
 
 .joinArticle__section p {
+  color: white;
   padding-top: 20px;
 }
 
@@ -482,10 +539,24 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 2%;
+  position: relative;
+}
+
+.cancionesArticle__rectangle {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  left: 0px;
+  top: 0px;
+  background-image: url("../recursos/Rectangle 8.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
 }
 
 .cancionesArticle__container--1 {
   text-align: center;
+  z-index: 2;
 }
 
 .cancionesArticle__container--1 h2 {
@@ -518,6 +589,7 @@ a:hover {
 }
 
 .cancionesArticle__container--2 {
+  z-index: 2;
   width: 80%;
   margin: 2rem auto;
 }
@@ -635,18 +707,19 @@ a:hover {
 .cancionesArticle .galeria__item--2 {
   margin-left: 20px;
   margin-right: 4px;
-  width: 27.9%;
+  margin-bottom: 80px;
+  width: 20%;
 }
 
 .cancionesArticle .galeria__item--3 {
-  margin-bottom: 80px;
+  margin-bottom: 150px;
   margin-top: 30px;
   margin-left: 20px;
   width: 15%;
 }
 
 .cancionesArticle .galeria__item--4 {
-  margin-bottom: 80px;
+  margin-bottom: 150px;
   margin-top: 30px;
   margin-left: 20px;
   width: 15%;
@@ -659,18 +732,16 @@ a:hover {
 }
 
 .cancionesArticle .galeria__item--6 {
-  margin-top: 40px;
   margin-right: 70px;
   width: 20%;
 }
 
 .cancionesArticle .galeria__item--7 {
-  margin-top: 65px;
+  margin-top: 40px;
   width: 50%;
 }
 
 .cancionesArticle .galeria__item--8 {
-  margin-top: 40px;
   margin-left: 80px;
   width: 30%;
 }
@@ -694,6 +765,12 @@ a:hover {
     overflow: scroll;
     padding-top: 40px;
   }
+  .cancionesArticle__rectangle {
+    display: none;
+  }
+  .cancionesArticle__container--1 {
+    position: absolute;
+  }
   .cancionesArticle__container--1 h2 {
     color: white;
   }
@@ -710,6 +787,8 @@ a:hover {
     width: -moz-fit-content;
     width: fit-content;
     margin: 5px auto;
+    margin-top: 50px;
+    margin-left: 20px;
   }
   .cancionesArticle .galeria {
     margin-top: 50px;
@@ -757,24 +836,29 @@ a:hover {
     position: relative;
   }
   .cancionesArticle .galeria__item--1 {
-    width: 300px;
+    width: 150px;
     margin: 0%;
+    margin-right: 10px;
   }
   .cancionesArticle .galeria__item--2 {
-    width: 300px;
+    width: 150px;
     margin: 0%;
+    margin-right: 10px;
   }
   .cancionesArticle .galeria__item--3 {
-    width: 300px;
+    width: 150px;
     margin: 0%;
+    margin-right: 10px;
   }
   .cancionesArticle .galeria__item--4 {
-    width: 300px;
+    width: 150px;
     margin: 0%;
+    margin-right: 10px;
   }
   .cancionesArticle .galeria__item--5 {
-    width: 300px;
+    width: 150px;
     margin: 0%;
+    margin-right: 10px;
   }
   .cancionesArticle .galeria__item--6 {
     width: 100%;
@@ -1079,6 +1163,7 @@ main .burgerMenu {
 }
 
 .vinilos {
+  position: relative;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(32.65%, #1a799d), color-stop(132.93%, #000000));
   background: linear-gradient(360deg, #1a799d 32.65%, #000000 132.93%);
   display: -webkit-box;
@@ -1106,6 +1191,15 @@ main .burgerMenu {
   padding-top: 2%;
   text-align: center;
   color: white;
+}
+
+.vinilos__rectangle {
+  height: 200px;
+  width: 100%;
+  background: #172631;
+  opacity: 60%;
+  position: absolute;
+  bottom: 0;
 }
 
 .vinilos .carrousel {
