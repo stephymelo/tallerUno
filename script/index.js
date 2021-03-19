@@ -102,7 +102,7 @@ function handleInterval() {
             currentSlide = 0;
         }
 
-        slider.style.transform = `translate(-${slider.clientWidth * currentSlide}px, 0px)`;
+        slider.style.transform = `translate(-${(slider.clientWidth ) * currentSlide}px, 0px)`;
 
     }
 
