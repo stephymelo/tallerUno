@@ -59,15 +59,17 @@ var width = window.innerWidth;
 
     if (width <= 1000) {
         function playMusic() {
-            console.log("suena");
+            
             if (audio.paused && !musicOn) {
                 musicOn=true;
                 console.log(musicOn+"musica");
                 music.style.display = "block";
                 audio.play();
-
-            } if(!audio.paused && musicOn==true){
+            } 
+            
+            if(!audio.paused && musicOn){
                 music.style.display = "none";
+                console.log(musicOn+"off");
                 musicOn=false;
                 audio.pause();
 

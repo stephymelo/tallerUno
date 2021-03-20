@@ -64,7 +64,7 @@ a:hover {
   background-color: #172631;
 }
 
-.footer .footer__main {
+.footer__main {
   padding-top: 30px;
   height: 80%;
   display: -webkit-box;
@@ -82,38 +82,38 @@ a:hover {
           justify-content: space-evenly;
 }
 
-.footer .footer__main .footer__img {
+.footer__img {
   width: 100px;
   height: 100px;
 }
 
-.footer .footer__main .footer__section {
+.footer__section {
   padding-right: 50px;
 }
 
-.footer .footer__main .footer__section h3 {
+.footer__section h3 {
   font-size: 24px;
   padding-bottom: 20px;
 }
 
-.footer .footer__main .footer__section p {
+.footer__section p {
   padding-top: 20px;
 }
 
-.footer .footer__main .footer__section1 {
+.footer__section--2 {
   padding-right: 50px;
 }
 
-.footer .footer__main .footer__section1 .footer__options li {
+.footer__section--2 .options li {
   font-size: 14px;
   padding-top: 10px;
 }
 
-.footer .footer__main .footer__section2 {
+.footer__section--3 {
   padding-right: 50px;
 }
 
-.footer .footer__main .footer__section2 .footer__img1 {
+.footer__section--3 img {
   width: 200px;
   height: 50px;
 }
@@ -139,7 +139,7 @@ a:hover {
   .footer {
     height: 55vh;
   }
-  .footer .footer__main {
+  .footer__main {
     height: 80%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -149,11 +149,11 @@ a:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .footer .footer__main .footer__img {
+  .footer__img {
     width: 80px;
     height: 80px;
   }
-  .footer .footer__main .footer__section {
+  .footer__section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     display: -webkit-box;
@@ -171,11 +171,11 @@ a:hover {
             align-items: center;
     padding-right: 10px;
   }
-  .footer .footer__main .footer__section h3 {
+  .footer__section h3 {
     font-size: 16px;
     padding-bottom: 20px;
   }
-  .footer .footer__main .footer__section .footer__section--1 {
+  .footer__section--1 {
     margin-top: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -185,34 +185,35 @@ a:hover {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .footer .footer__main .footer__section .footer__section--1 p {
+  .footer__section--1 p {
     padding-top: 0px;
     margin-right: 20px;
   }
-  .footer .footer__main .footer__section1 {
+  .footer__section--2 {
     padding-right: 50px;
   }
-  .footer .footer__main .footer__section1 .footer__options li {
+  .footer__section--2 .options li {
     font-size: 10px;
     text-align: center;
     padding-top: 10px;
   }
-  .footer .footer__main .footer__section2 {
+  .footer__section--3 {
     padding-right: 50px;
   }
-  .footer .footer__main .footer__section2 .footer__img1 {
+  .footer__section--3 img {
     padding-top: 10px;
     width: 80px;
     height: 30px;
   }
-  .footer span {
+  span {
     font-size: 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: -60px;
     padding-top: 30px;
   }
-  .footer p .icon {
+  p .icon {
     width: 30px;
     height: 20px;
     padding-right: 10px;
@@ -268,7 +269,7 @@ a:hover {
 .subscribe__bg {
   position: absolute;
   z-index: -1;
-  left: 150px;
+  left: 350px;
   top: 140px;
   width: 500px;
   height: 100%;
@@ -279,9 +280,9 @@ a:hover {
 .subscribe__bgblue {
   position: absolute;
   z-index: -1;
-  left: 780px;
-  top: 400px;
-  width: 400px;
+  right: 350px;
+  top: 390px;
+  width: 500px;
   height: 100%;
   background-image: url("../recursos/subscribeBG2.png");
   background-repeat: no-repeat;
@@ -519,8 +520,8 @@ a:hover {
     text-align: center;
   }
   .joinArticle__section--img {
-    width: 200px;
-    size: 200px;
+    width: 300px;
+    size: 300px;
     padding-top: 5%;
   }
 }
@@ -1121,7 +1122,7 @@ main .burgerMenu {
     margin-top: 0px;
   }
   .newsletter__section1 img {
-    width: 100%;
+    width: 80%;
   }
   .newsletter__section2 {
     margin-top: -20px;

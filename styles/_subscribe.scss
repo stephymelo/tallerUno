@@ -30,7 +30,7 @@
   &__bg {
     position: absolute;
     z-index: -1;
-    left: 150px;
+    left: 350px;
     top: 140px;
     width: 500px;
     height: 100%;
@@ -41,9 +41,9 @@
   &__bgblue {
     position: absolute;
     z-index: -1;
-    left: 780px;
-    top: 400px;
-    width: 400px;
+    right: 350px;
+    top: 390px;
+    width: 500px;
     height: 100%;
     background-image: url("../recursos/subscribeBG2.png");
     background-repeat: no-repeat;
