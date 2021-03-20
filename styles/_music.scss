@@ -235,14 +235,8 @@
       flex-wrap: nowrap;
 
       &__pausebtn {
-        position: absolute;
-        width: 30px;
-        top: 40%;
-        left: 45%;
-        align-items: center;
         display: none;
-        opacity: 0;
-        transition: all 0.4s;
+        
       }
       &__playbtn {
         display: none;

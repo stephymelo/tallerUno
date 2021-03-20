@@ -65,16 +65,13 @@ var width = window.innerWidth;
                 console.log(musicOn+"musica");
                 music.style.display = "block";
                 audio.play();
-            } 
-            
-            if(!audio.paused && musicOn){
+            } else if(!audio.paused && musicOn){
                 music.style.display = "none";
                 console.log(musicOn+"off");
                 musicOn=false;
                 audio.pause();
-
             }
-           
+  
         }
 
     }
