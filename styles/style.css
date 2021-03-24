@@ -271,7 +271,7 @@ a:hover {
   z-index: -1;
   left: 350px;
   top: 140px;
-  width: 500px;
+  width: 100%;
   height: 100%;
   background-image: url("../recursos/subscribeBG.png");
   background-repeat: no-repeat;
@@ -282,7 +282,7 @@ a:hover {
   z-index: -1;
   right: 350px;
   top: 390px;
-  width: 500px;
+  width: 100%;
   height: 100%;
   background-image: url("../recursos/subscribeBG2.png");
   background-repeat: no-repeat;
@@ -393,11 +393,13 @@ a:hover {
   .subscribe__bg {
     left: 150px;
     top: 140px;
+    width: 60%;
     background-size: 250px;
   }
   .subscribe__bgblue {
     left: 80px;
     top: 650px;
+    width: 50%;
     background-size: 250px;
   }
   .subscribe__article {
@@ -784,7 +786,6 @@ a:hover {
     width: 100%;
     margin: 5px auto;
     margin-top: 50px;
-    margin-left: 20px;
     overflow: scroll;
   }
   .cancionesArticle .galeria {
