@@ -225,11 +225,13 @@
       width:100%;
       margin: 5px auto;
       margin-top:50px;
-     
+      
       overflow: scroll;
+      overflow-y: hidden;
     }
 
     .galeria {
+     
       margin-top: 50px;
       width: fit-content;
       flex-wrap: nowrap;
