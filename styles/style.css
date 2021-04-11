@@ -1284,4 +1284,16 @@ main .burgerMenu {
     margin-right: 0px;
   }
 }
+
+.productForm__label {
+  display: block;
+}
+
+.productForm__label--checkbox {
+  margin-top: 2px;
+}
+
+.productForm__input {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
