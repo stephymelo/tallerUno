@@ -7,9 +7,10 @@ const firebaseConfig = {
     appId: "1:434084723620:web:c624db7e0da45d130e9f31"
   };
   firebase.initializeApp(firebaseConfig);
-
-const db = firebase.firestore();  
+  
 const productForm = document.querySelector('.productForm');
+const db = firebase.firestore();  
+
 
 productForm.addEventListener('submit',function(event){
     event.preventDefault();
