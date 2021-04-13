@@ -1285,15 +1285,47 @@ main .burgerMenu {
   }
 }
 
+.productForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productForm__section--1 {
+  width: 60%;
+}
+
+.productForm__section--2 {
+  width: 40%;
+  border-color: gray;
+}
+
 .productForm__label {
   display: block;
 }
 
 .productForm__label--checkbox {
+  display: inline-block;
   margin-top: 2px;
 }
 
 .productForm__input {
+  display: block;
+}
+
+.productForm__price {
+  display: block;
+}
+
+.productForm__btn {
+  margin-top: 50px;
+}
+
+.productForm__genre {
+  display: block;
+}
+
+.productForm__date {
   display: block;
 }
 /*# sourceMappingURL=style.css.map */

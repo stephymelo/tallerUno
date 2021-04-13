@@ -1,7 +1,22 @@
 .productForm{
+    display: flex;
+    &__section--1{
+        width:60%;
+
+       
+
+    }
+    &__section--2{
+        width:40%;
+        border-color: gray;
+        
+
+    }
+
     &__label{
         display: block;
        &--checkbox{
+           display: inline-block;
            margin-top: 2px;
        }
 
@@ -11,8 +26,23 @@
         display: block;
 
     }
+    &__price{
+        display: block;
+    }
 
     &__btn{
+        
+        margin-top:50px;
+        
+       
+    }
+
+    &__genre{
+        display: block;
+    }
+
+    &__date{
+        display: block;
 
     }
 }

@@ -6,13 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/reset.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <title>product Form</title>
 </head>
 <body>
     <form class="productForm">
+        <section class="productForm__section--1">
         <label class="productForm__label" for="">Name</label>
         <input class="productForm__input" id="name" name="name" type="text" placeholder="Product name">
-        
+
+        <label class="productForm__label" for="">
+            Description
+        <input class="productForm__input" id="name" name="name" type="text" >
+        </label>
+
+        <label class="productForm__label" for="">
+            Release year
+        <input  class="productForm__date" id="date" name="date" type="month" >
+        </label>
+
+        <label class="productForm__label" for="">
+            Genre
+        <input  class="productForm__genre" id="genre" name="genre" list="genres" >
+            <datalist id="genres">
+                <option value="EDM">
+                <option value="Synthwave">
+                <option value="Ambient">
+                <option value="Avant pop">
+             </datalist>
+        </label>
+
+
         <label class="productForm__label">
             Price
             <input class="productForm__input" name="price" type="number">
@@ -23,18 +49,30 @@
             <input class="productForm__checkbox" type="checkbox" name="format_vinyl">
             Vinyl
         </label>
+
         <label class="productForm__label productForm__label--checkbox">
             <input class="productForm__checkbox" type="checkbox" name="format_cd">
             CD
         </label>
+
         <label class="productForm__label productForm__label--checkbox">
             <input class="productForm__checkbox" type="checkbox" name="format_digital">
             Digital
         </label>
-      
+    </section>
+    <section class="productForm__section--2">
 
-        <button  class="productForm__btn" type="submit">ok</button> 
+    
+
+        <label class="productForm__label" for="">
+            Add images
+        <input class="productForm__file" id="file" name="file" type="file" >
+        </label>
+    </section>
+
+   
     </form>
+    <button  class="productForm__btn" type="submit">ok</button> 
 
 
 
