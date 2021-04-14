@@ -17,10 +17,8 @@
         <label class="productForm__label" for="">Name</label>
         <input class="productForm__input" id="name" name="name" type="text" placeholder="Product name">
 
-        <label class="productForm__label" for="">
-            Description
-        <input class="productForm__input" id="name" name="name" type="text" >
-        </label>
+      
+        
 
         <label class="productForm__label" for="">
             Release year
@@ -29,20 +27,15 @@
 
         <label class="productForm__label" for="">
             Genre
-        <input  class="productForm__genre" id="genre" name="genre" list="genres" >
-            <datalist id="genres">
-                <option value="EDM">
-                <option value="Synthwave">
-                <option value="Ambient">
-                <option value="Avant pop">
-             </datalist>
+            <select  class="productForm__genre" id="genre" name="genre" list="genres" >
+                <option value="edm">EDM</option>
+                <option value="synthwave">Synthwave</option>
+                <option value="ambient">Ambient</option>
+                <option value="avant_pop">Avant pop</option>
+            </select>
         </label>
 
 
-        <label class="productForm__label">
-            Price
-            <input class="productForm__input" name="price" type="number">
-        </label>
 
         <label class="productForm__label">  Format  </label>
         <label class="productForm__label productForm__label--checkbox">
@@ -59,6 +52,22 @@
             <input class="productForm__checkbox" type="checkbox" name="format_digital">
             Digital
         </label>
+
+        <label class="productForm__label" for="">
+            Tracklist
+        </label>
+        <input class="productForm__tracklist" id="track" name="track" type="text" >
+        <button class="productForm__addtrack" type="button">+</button>
+
+        <label class="productForm__label" for="">
+            Description
+        <input class="productForm__input" id="name" name="name" type="text" >
+        </label>
+        
+        <label class="productForm__label">
+            Price
+            <input class="productForm__input" name="price" type="number">
+        </label>
     </section>
     <section class="productForm__section--2">
 
@@ -70,9 +79,9 @@
         </label>
     </section>
 
-   
-    </form>
     <button  class="productForm__btn" type="submit">ok</button> 
+    </form>
+    
 
 
 <!-- <script src="/__/firebase/8.3.0/firebase-app.js"></script> -->

@@ -10,7 +10,16 @@ const firebaseConfig = {
   
 const productForm = document.querySelector('.productForm');
 const db = firebase.firestore();  
+const tracklist = [];
 
+
+productForm.addEventListener('button',function(event){
+    event.preventDefault();
+    var newTrack = document.createElement(track,"input");
+   
+    // track.push(productForm.track.value);
+
+});
 
 productForm.addEventListener('submit',function(event){
     event.preventDefault();
