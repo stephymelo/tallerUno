@@ -1,17 +1,19 @@
 .productForm{
     display: flex;
-    &__section--1{
-        width:60%;
 
-       
-
+    &__section{
+        &--1{
+            width:50%;
+        }
+        &--2{
+            width:40%;
+            border-color: gray;
+        }
+        &--3{
+            width:10%;
+        }
     }
-    &__section--2{
-        width:40%;
-        border-color: gray;
-        
-
-    }
+  
 
     &__label{
         display: block;

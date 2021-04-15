@@ -9,6 +9,10 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   
 const productForm = document.querySelector('.productForm');
+const productFormLoader = document.querySelector('.productForm__loader');
+const productFormSuccess = document.querySelector('.productForm__success');
+const productFormError = document.querySelector('.productForm__error');
+const productFormImages = document.querySelector('.productForm__images');
 const db = firebase.firestore();  
 const imageFiles = [];
 const tracklist = [];
@@ -66,10 +70,34 @@ productForm.addEventListener('submit',function(event){
     if(productForm.format_cd.checked) product.format.push('cd');
     if(productForm.format_digital.checked) product.format.push('digital');
 
+    ///ERROR EN PARAMETROS Y SUBIDA
     let error = '';
     if(!product.name) {
-        error += 'The product name is required. <br/>';
-  }
+        error += 'The album name is required. <br/>';
+    }
+    if(!product.price) {
+        error += 'The product price is required. <br/>';
+    }
+    if(product.price < 1) {
+        error += 'The product price can\'t be less than 1. <br/>';
+    }
+    
+    if(error) {
+        productFormError.innerHTML = error;
+        productFormError.classList.remove('hidden');
+        return;
+    } else {
+        productFormError.classList.add('hidden');
+    }
+
+    productFormLoader.classList.remove('hidden');
+    productFormError.classList.add('hidden');
+
+    const genericCatch = function (error) {
+        productFormLoader.classList.add('hidden');
+        productFormError.classList.remove('hidden');
+        productFormError.innerHTML = 'There was an error in the product upload.';
+    }
 
 
 

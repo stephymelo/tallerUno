@@ -14,6 +14,24 @@
 <body>
     <form class="productForm">
         <section class="productForm__section--1">
+
+
+        <!-- <p class="productForm__loader hidden">
+                Loading...
+        </p>
+          
+        <p class="productForm__success hidden">
+                Document successfully added
+        </p> -->
+          
+        <!-- <p class="productForm__error hidden">
+                We had a problem, try again
+        </p> -->
+
+        <p class="productForm__title">
+            Publish album information
+         </p>
+
         <label class="productForm__label" for="">Name</label>
         <input class="productForm__input" id="name" name="name" type="text" placeholder="Product name">
 
@@ -76,17 +94,16 @@
         <label class="productForm__label" for=""></label>
             Add images
         <div class="productForm__images"></div>
-        <input multiple accept=".jpg,.png,.webp,.jfif" id="image" class="productForm__input" name="image" type="file">
-
-        
+        <input multiple accept=".jpg,.png,.webp,.jfif" id="image" class="productForm__input" name="image" type="file"> 
     </section>
-
-    <button  class="productForm__btn" type="submit">ok</button> 
+    <section class="productForm__section--3">
+        <button  class="productForm__btn" type="submit">ok</button> 
+    </section>
     </form>
     
 
 
-<!-- <script src="/__/firebase/8.3.0/firebase-app.js"></script> -->
+
 <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
