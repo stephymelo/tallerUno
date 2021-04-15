@@ -10,16 +10,44 @@ const firebaseConfig = {
   
 const productForm = document.querySelector('.productForm');
 const db = firebase.firestore();  
+const imageFiles = [];
 const tracklist = [];
 
 
+// tracklist
 productForm.addEventListener('button',function(event){
     event.preventDefault();
-    var newTrack = document.createElement(track,"input");
+    console.log("alo");
+    const newTrack = document.createElement("input");
+    newTrack.name = "strack";
+    newTrack.classList.add('productForm__tracklist');
    
     // track.push(productForm.track.value);
 
 });
+
+
+productForm.image.addEventListener('change', function () {
+    const file = productForm.image.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      const productFormImg = document.createElement('img');
+      productFormImg.classList.add('productForm__img');
+      productFormImg.setAttribute('src', event.target.result);
+      productFormImages.appendChild(productFormImg);
+    }
+    reader.readAsDataURL(file); // convert to base64 string
+    imageFiles.push(file);
+  });
+
+
+
+
+
+
+
+///SUBIR A FIREBASE INFO
 
 productForm.addEventListener('submit',function(event){
     event.preventDefault();
@@ -38,13 +66,62 @@ productForm.addEventListener('submit',function(event){
     if(productForm.format_cd.checked) product.format.push('cd');
     if(productForm.format_digital.checked) product.format.push('digital');
 
-    db.collection('productos').add(product).then(function(docRef){
-        console.log(docRef.id);
+    let error = '';
+    if(!product.name) {
+        error += 'The product name is required. <br/>';
+  }
 
+
+
+
+     // espera a subir la información al firestore
+    db.collection('productos').add(product).then(function(docRef){
+    const uploadPromises = [];
+    const downloadUrlPromises = [];
+
+    imageFiles.forEach(function (file) {
+      var storageRef = firebase.storage().ref();
+      var fileRef = storageRef.child(`products/${docRef.id}/${file.name}`);
+      // espera a subir la imagen
+      uploadPromises.push(fileRef.put(file));
     });
+
+    Promise.all(uploadPromises).then(function (snapshots) {
+      snapshots.forEach(function (snapshot) {
+        // espera a obtener la url de descarga de la imagen
+        downloadUrlPromises.push(snapshot.ref.getDownloadURL());
+      });
+
+      Promise.all(downloadUrlPromises).then(function (downloadURLs) {
+
+        const images = [];
+        downloadURLs.forEach(function (url, index) {
+          images.push({
+            url: url,
+            ref: snapshots[index].ref.fullPath
+          });
+        });
+
+        db.collection('products').doc(docRef.id).update({
+          images: images
+        }).then(function () {
+          productFormLoader.classList.add('hidden');
+          productFormSuccess.classList.remove('hidden');
+        })
+        .catch(genericCatch);
+      })
+      .catch(genericCatch);
+    })
+    .catch(genericCatch);
+  })
+  .catch(genericCatch);
+
+});
 
 
     
 
 
-});
+
+
+
