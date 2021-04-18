@@ -1,32 +1,30 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyBgeF_BrTBqeSOLHlAtxNd_aDxW9wHDkps",
-    authDomain: "web2021-68d94.firebaseapp.com",
-    projectId: "web2021-68d94",
-    storageBucket: "web2021-68d94.appspot.com",
-    messagingSenderId: "434084723620",
-    appId: "1:434084723620:web:c624db7e0da45d130e9f31"
-  };
-  firebase.initializeApp(firebaseConfig);
+
   
 const productForm = document.querySelector('.productForm');
+const firstTrack = document.querySelector('.productForm__track');
+const tracklistContainer = document.querySelector('.productForm__tracklist');
+const addTrackBtn = document.querySelector('.productForm__addtrack');
 const productFormLoader = document.querySelector('.productForm__loader');
 const productFormSuccess = document.querySelector('.productForm__success');
 const productFormError = document.querySelector('.productForm__error');
 const productFormImages = document.querySelector('.productForm__images');
-const db = firebase.firestore();  
 const imageFiles = [];
-const tracklist = [];
+const tracklistArray = [];
+tracklistArray.push(firstTrack);
 
 
 // tracklist
-productForm.addEventListener('button',function(event){
+addTrackBtn.addEventListener('click',function(event){
     event.preventDefault();
     console.log("alo");
     const newTrack = document.createElement("input");
-    newTrack.name = "strack";
-    newTrack.classList.add('productForm__tracklist');
-   
-    // track.push(productForm.track.value);
+    newTrack.name = "track";
+    newTrack.classList.add('productForm__track');
+    tracklistContainer.appendChild(newTrack);
+    
+
+    tracklistArray.push(newTrack);
+    console.log(productForm.track.value);
 
 });
 
@@ -41,7 +39,7 @@ productForm.image.addEventListener('change', function () {
       productFormImg.setAttribute('src', event.target.result);
       productFormImages.appendChild(productFormImg);
     }
-    reader.readAsDataURL(file); // convert to base64 string
+    reader.readAsDataURL(file); // 
     imageFiles.push(file);
   });
 
@@ -55,17 +53,31 @@ productForm.image.addEventListener('change', function () {
 
 productForm.addEventListener('submit',function(event){
     event.preventDefault();
-    console.log('name: ',productForm.name.value);
-    console.log('price: ',productForm.price.value);
-    console.log('vinyl: ',productForm.format_vinyl.checked);
-    console.log('cd: ',productForm.format_cd.checked);
-    console.log('digital: ',productForm.format_digital.checked);
+    console.log('name: ',productForm.name);
+    // console.log('price: ',productForm.price.value);
+    // console.log('vinyl: ',productForm.format_vinyl.checked);
+    // console.log('cd: ',productForm.format_cd.checked);
+    // console.log('digital: ',productForm.format_digital.checked);
+    tempTracklist = [];
+     tracklistArray.forEach((element)=>{
+       if(element.value!=null){
+         tempTracklist.push(element.value);
+         console.log("ele"+element.value);
+         
+       }
+     });
 
+    
     const product = {
         name:productForm.name.value,
         price:parseInt(productForm.price.value),
+        genre:productForm.genre.value,
+        description:productForm.description.value,
+        date:productForm.date.value,
         format: [],
+        tracklist: tempTracklist,
     };
+    
     if(productForm.format_vinyl.checked) product.format.push('vinyl');
     if(productForm.format_cd.checked) product.format.push('cd');
     if(productForm.format_digital.checked) product.format.push('digital');
@@ -73,13 +85,13 @@ productForm.addEventListener('submit',function(event){
     ///ERROR EN PARAMETROS Y SUBIDA
     let error = '';
     if(!product.name) {
-        error += 'The album name is required. <br/>';
+        error += 'Album name is required. <br/>';
     }
     if(!product.price) {
-        error += 'The product price is required. <br/>';
+        error += 'Product price is required. <br/>';
     }
     if(product.price < 1) {
-        error += 'The product price can\'t be less than 1. <br/>';
+        error += 'Product price can\'t be less than 1. <br/>';
     }
     
     if(error) {
@@ -96,27 +108,28 @@ productForm.addEventListener('submit',function(event){
     const genericCatch = function (error) {
         productFormLoader.classList.add('hidden');
         productFormError.classList.remove('hidden');
-        productFormError.innerHTML = 'There was an error in the product upload.';
+        productFormError.innerHTML = 'There was an error in the upload.';
+        console.log("error"+error);
     }
 
 
 
 
-     // espera a subir la información al firestore
-    db.collection('productos').add(product).then(function(docRef){
+     // info a firebase
+    productsCol.add(product).then(function(docRef){
     const uploadPromises = [];
     const downloadUrlPromises = [];
 
     imageFiles.forEach(function (file) {
       var storageRef = firebase.storage().ref();
       var fileRef = storageRef.child(`products/${docRef.id}/${file.name}`);
-      // espera a subir la imagen
+      // 
       uploadPromises.push(fileRef.put(file));
     });
 
     Promise.all(uploadPromises).then(function (snapshots) {
       snapshots.forEach(function (snapshot) {
-        // espera a obtener la url de descarga de la imagen
+        // 
         downloadUrlPromises.push(snapshot.ref.getDownloadURL());
       });
 
@@ -130,7 +143,7 @@ productForm.addEventListener('submit',function(event){
           });
         });
 
-        db.collection('products').doc(docRef.id).update({
+        productsCol.doc(docRef.id).update({
           images: images
         }).then(function () {
           productFormLoader.classList.add('hidden');

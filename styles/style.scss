@@ -1,5 +1,7 @@
 /* Cosas Generales */
-
+.hidden {
+    display: none !important;
+}
 body {
     font-family: "Raleway", sans-serif;
     align-items: center;
@@ -78,6 +80,7 @@ a:hover {
 
 
 
+@import "./store.scss";
 @import "./_footer.scss";
 @import "./_subscribe.scss";
 @import "./_join.scss";

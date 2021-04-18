@@ -1,4 +1,8 @@
 /* Cosas Generales */
+.hidden {
+  display: none !important;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   -webkit-box-align: center;
@@ -1292,12 +1296,16 @@ main .burgerMenu {
 }
 
 .productForm__section--1 {
-  width: 60%;
+  width: 50%;
 }
 
 .productForm__section--2 {
   width: 40%;
   border-color: gray;
+}
+
+.productForm__section--3 {
+  width: 10%;
 }
 
 .productForm__label {
