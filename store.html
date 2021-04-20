@@ -12,14 +12,37 @@
     <title>Store</title>
 </head>
 <body>
+    <form class="filters">
+        <label for="type" class="productForm__label">Type of product</label>
+        <select id="type" class="productForm__input" name="type">
+          <option value="">Select a type</option>
+          <option value="vinyl">Vinyl</option>
+          <option value="cd">CD</option>
+          <option value="digital">Digital Copy</option>
+        </select>
     
-
-
-
-
-
-
-
+        <label class="productForm__label productForm__label--checkbox">
+          <input data-type="vinyl" class="productForm__checkbox" type="checkbox" name="test">
+          Vinyl
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+          <input data-type="cd" class="productForm__checkbox" type="checkbox" name="test">
+          CD
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+          <input data-type="digital" class="productForm__checkbox" type="checkbox" name="test">
+          Digital
+        </label>
+    
+        <label for="price" class="productForm__label">Price range</label>
+        <select id="price" class="productForm__input" name="price">
+          <option value="">Select a type</option>
+          <option value="0">less than 10.00</option>
+          <option value="1">between 10.00 and 30.00</option>
+          <option value="2">more than 30.00</option>
+        </select>
+      </form>
+ 
     <section class="list">
 
     </section>

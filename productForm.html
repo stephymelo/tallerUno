@@ -12,6 +12,28 @@
     <title>product Form</title>
 </head>
 <body>
+    <header class="header">
+        <div>
+            <img src="./recursos/bandcamplogoOne.png" class="header__img">
+        </div>
+        <nav class="navegacion">
+            <ul class="navegacion__list">
+                <li><a href="store.html"></a>Store</li>
+                <li><a href="cart.html"></a>Cart</li>
+                <li> Discover <input type="text"></input></li>
+                <li> <a href="login.html"></a>Log in</li>
+            </ul>
+        </nav>
+        <!-- <button class="burgerMenu">
+            <img src="./recursos/menuHamburger.png">
+        </button> -->
+
+
+    </header>
+
+    <p class="title">
+        Publish album information
+     </p>
 
 
     <form class="productForm">
@@ -30,18 +52,13 @@
                 We had a problem, try again
         </p>
 
-        <p class="productForm__title">
-            Publish album information
-         </p>
+       
         <section class="productForm__section--1">
-        <label class="productForm__label" for="">Name</label>
-        <input class="productForm__input" id="name" name="name" type="text" placeholder="Product name">
-
-      
-        
+        <label class="productForm__label" for="">Album name</label>
+        <input class="productForm__input" id="name" name="name" type="text" >
 
         <label class="productForm__label" for="">
-            Release year
+            Debut year
         <input  class="productForm__date" id="date" name="date" type="month" >
         </label>
 
