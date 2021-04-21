@@ -35,7 +35,7 @@ body input {
   border-radius: 6px;
 }
 
-body input :checked ~ .checkmark {
+body input :checked {
   background-color: gray;
 }
 
@@ -1343,6 +1343,7 @@ main .burgerMenu {
 }
 
 body {
+  height: 100vh;
   background-color: linear-gradient(182.2deg, #FEFEFF 66.38%, #91DCDC 98.23%);
 }
 

@@ -1,4 +1,5 @@
 body{
+    height: 100vh;
     background-color: linear-gradient(182.2deg, #FEFEFF 66.38%, #91DCDC 98.23%);
 }
 
@@ -52,6 +53,7 @@ body{
     display: flex;
     margin-left:50px;
     margin-top:10px;
+    
 
     &__section{
         &--1{
