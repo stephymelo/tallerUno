@@ -4,6 +4,7 @@
 }
 
 body {
+  background-color: white;
   font-family: "Raleway", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1342,9 +1343,11 @@ main .burgerMenu {
   }
 }
 
-body {
+.productformbody {
   height: 100vh;
-  background-color: linear-gradient(182.2deg, #FEFEFF 66.38%, #91DCDC 98.23%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
 }
 
 .header {
@@ -1406,29 +1409,79 @@ body {
 }
 
 .productForm__section--1 {
+  margin-top: 50px;
   width: 50%;
 }
 
 .productForm__section--2 {
   width: 40%;
+  margin-top: 50px;
   border-color: gray;
 }
 
 .productForm__section--3 {
+  margin-top: 600px;
   width: 10%;
+}
+
+.productForm__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productForm__div--2 {
+  margin-top: 50px;
+}
+
+.productForm__div--3 {
+  margin-top: 50px;
+}
+
+.productForm__div--4 {
+  margin-top: 50px;
+}
+
+.productForm__div--5 {
+  margin-top: 50px;
+}
+
+.productForm__div--6 {
+  margin-top: 50px;
+}
+
+.productForm__checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productForm__checkboxes--1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productForm__checkbox {
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-top: 2px;
 }
 
 .productForm__label {
   display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .productForm__label--checkbox {
-  display: inline-block;
+  margin-bottom: 0px;
+  margin-left: 10px;
   margin-top: 2px;
 }
 
 .productForm__input {
-  display: block;
+  margin-right: 30px;
 }
 
 .productForm__price {
@@ -1444,7 +1497,16 @@ body {
   margin-top: 5px;
 }
 
+.productForm__addtrack {
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-bottom: 1px;
+  padding-right: 5px;
+}
+
 .productForm__genre {
+  margin-right: 30px;
+  margin-left: 30px;
   display: block;
 }
 

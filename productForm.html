@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,8 @@
         rel="stylesheet">
     <title>product Form</title>
 </head>
-<body>
+
+<body class="productformbody">
     <header class="header">
         <div>
             <img src="./recursos/bandcamplogoOne.png" class="header__img">
@@ -33,7 +35,7 @@
 
     <p class="title">
         Publish album information
-     </p>
+    </p>
 
 
     <form class="productForm">
@@ -41,101 +43,115 @@
 
 
         <p class="productForm__loader hidden">
-                Loading...
+            Loading...
         </p>
-          
+
         <p class="productForm__success hidden">
-                Document successfully added
+            Document successfully added
         </p>
-          
+
         <p class="productForm__error hidden">
-                We had a problem, try again
+            We had a problem, try again
         </p>
 
-       
+
         <section class="productForm__section--1">
-        <label class="productForm__label" for="">Album name</label>
-        <input class="productForm__input" id="name" name="name" type="text" >
+            <div class="productForm__div productForm__div--1">
+                <label class="productForm__label" for="">Album name</label>
+                <input class="productForm__input" id="name" name="name" type="text">
 
-        <label class="productForm__label" for="">
-            Debut year
-        <input  class="productForm__date" id="date" name="date" type="month" >
-        </label>
-
-        <label class="productForm__label" for="">
-            Genre
-            <select  class="productForm__genre" id="genre" name="genre" list="genres" >
-                <option value="edm">EDM</option>
-                <option value="synthwave">Synthwave</option>
-                <option value="ambient">Ambient</option>
-                <option value="avant_pop">Avant pop</option>
-            </select>
-        </label>
+                <label class="productForm__label" for="">
+                    Debut year</label>
+                <input class="productForm__date" id="date" name="date" type="month">
+            </div>
 
 
 
-        <label class="productForm__label">  Format  </label>
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" type="checkbox" name="format_vinyl">
-            Vinyl
-        </label>
+            <div class="productForm__div productForm__div--2">
+                <label class="productForm__label" for="">
+                    Genre</label>
+                <select class="productForm__genre" id="genre" name="genre" list="genres">
+                    <option value="edm">EDM</option>
+                    <option value="synthwave">Synthwave</option>
+                    <option value="ambient">Ambient</option>
+                    <option value="avant_pop">Avant pop</option>
+                </select>
 
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" type="checkbox" name="format_cd">
-            CD
-        </label>
+                <label class="productForm__label"> Format </label>
+            <div class="productForm__checkboxes">
+                    <div class="productForm__checkboxes--1">
+                        <label class="productForm__label productForm__label--checkbox">Vinyl</label>
+                        <input class="productForm__checkbox" type="checkbox" name="format_vinyl">
+                    </div>
 
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" type="checkbox" name="format_digital">
-            Digital
-        </label>
+                    <div class="productForm__checkboxes--2">
+                        <label class="productForm__label productForm__label--checkbox">CD</label>
+                        <input class="productForm__checkbox" type="checkbox" name="format_cd">
+                    </div>
+                    <div class="productForm__checkboxes--3">
+                        <label class="productForm__label productForm__label--checkbox">Digital</label>
+                        <input class="productForm__checkbox" type="checkbox" name="format_digital">
+                    </div>
+                </div>
 
-        <label class="productForm__label" for="">Tracklist</label>
-        <div  class="productForm__tracklist"> 
-            <input class="productForm__track" id="track" name="track" type="text" >
-        </div>
-        <button class="productForm__addtrack" type="button">+</button>
+            </div>
 
-        <label class="productForm__label" for="">
-            Description
-        <input class="productForm__input" id="description" name="description" type="text" >
-        </label>
-        
-        <label class="productForm__label">
-            Price
-            <input class="productForm__input" name="price" type="number">
-        </label>
-    </section>
 
-    <!-- Section Add images -->
-    <section class="productForm__section--2">
-        <label class="productForm__label" for="">Add images</label>
-            
-        <div class="productForm__images"></div>
-        <input multiple accept=".jpg,.png,.webp,.jfif" id="image" class="productForm__input" name="image" type="file">
 
-        
-    </section>
 
-    <section class="productForm__section--3">
-        <button  class="productForm__btn" type="submit">ok</button> 
-    </section>
+
+            <div class="productForm__div productForm__div--4">
+                <label class="productForm__label" for="">Tracklist</label>
+                <div class="productForm__tracklist">
+                    <button class="productForm__addtrack" type="button">+</button>
+                    <input class="productForm__track" id="track" name="track" type="text">
+                </div>
+            </div>
+
+            <div class="productForm__div productForm__div--5">
+                <label class="productForm__label" for="">Description</label>
+                <input class="productForm__input" id="description" name="description" type="text">
+            </div>
+            <div class="productForm__div productForm__div--6">
+                <label class="productForm__label"> Price </label>
+                <input class="productForm__input" name="price" type="number">
+                <label class="productForm__label">Select album color</label>
+                <input type="color" id="color" name="color" value="#ff0000">
+            </div>
+        </section>
+
+        <!-- Section Add images -->
+        <section class="productForm__section--2">
+            <label class="productForm__label" for="">Add images</label>
+
+            <div class="productForm__images"></div>
+            <input multiple accept=".jpg,.png,.webp,.jfif" id="image" class="productForm__input" name="image"
+                type="file">
+
+
+        </section>
+
+        <section class="productForm__section--3">
+            <button class="productForm__btn" type="submit">Publish</button>
+        </section>
     </form>
-    
 
 
-<!-- <script src="/__/firebase/8.3.0/firebase-app.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
 
-<!-- <script src="/__/firebase/8.3.0/firebase-auth.js"></script> -->
+    <!-- <script src="/__/firebase/8.3.0/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+    <!-- <script src="/__/firebase/8.3.0/firebase-auth.js"></script> -->
 
 
-</script>
+    </script>
 
-<script src="./script/firebasestor.js"></script>
-<script src="./script/productForm.js"></script>
-    
+    <script src="./script/firebasestor.js"></script>
+    <script src="./script/productForm.js"></script>
+
 </body>
+
 </html>

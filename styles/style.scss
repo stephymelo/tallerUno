@@ -3,6 +3,7 @@
     display: none !important;
 }
 body {
+    background-color: white;
     font-family: "Raleway", sans-serif;
     align-items: center;
     justify-content: center;
@@ -95,7 +96,7 @@ a:hover {
 
 
 
-@import "./store.scss";
+@import "./_store.scss";
 @import "./_footer.scss";
 @import "./_subscribe.scss";
 @import "./_join.scss";

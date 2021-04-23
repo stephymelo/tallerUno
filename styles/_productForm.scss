@@ -1,9 +1,12 @@
-body{
-    height: 100vh;
-    background-color: linear-gradient(182.2deg, #FEFEFF 66.38%, #91DCDC 98.23%);
+.productformbody{
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background:linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
 }
 
 .header {
+    
     width: 100%;
     display: flex;
     padding: 2% 0;
@@ -57,29 +60,98 @@ body{
 
     &__section{
         &--1{
+            margin-top:50px;
             width:50%;
         }
         &--2{
             width:40%;
+            margin-top:50px;
             border-color: gray;
         }
         &--3{
+            margin-top:600px;
             width:10%;
         }
+    }
+    &__div{
+        display: flex;
+        
+        
+            &--1{
+               
+                
+            }
+            &--2{
+                
+                margin-top:50px;
+                
+            }
+            &--3{
+                margin-top:50px;
+              
+            }
+            &--4{
+                margin-top:50px;
+              
+            }
+            &--5{
+                margin-top:50px;
+              
+            }
+            &--6{
+                margin-top:50px;
+              
+            }
+        
+        
+    }
+    //contenedor de los checks
+    &__checkboxes{
+        display: flex;
+
+        &--1{
+           
+            display: flex;
+            
+          
+
+        }
+        &--2{
+            
+        }
+        
+        &--3{
+            
+        }
+        
+        
+
+    }
+    &__checkbox{
+        margin-bottom:0px;
+        margin-left:10px;
+        margin-top: 2px;
+
     }
   
 
     &__label{
-        display: block;
+        display:block;
+        margin-right:10px;
+        margin-bottom: 10px;
+        
+       
        &--checkbox{
-           display: inline-block;
+           margin-bottom:0px;
+           margin-left:10px;
            margin-top: 2px;
        }
 
     }
 
     &__input{
-        display: block;
+        margin-right:30px;
+       
 
     }
     &__price{
@@ -87,22 +159,28 @@ body{
     }
 
     &__btn{
-        
         margin-top:50px;
         
        
     }
 
     &__track{
+       
         margin-right:10px;
         margin-top:5px;
 
     }
     &__addtrack{
-        
+        padding-top:1px;
+        padding-left: 5px;
+        padding-bottom: 1px;
+        padding-right:5px;
+      
     }
 
     &__genre{
+        margin-right:30px;
+        margin-left:30px;
         display: block;
     }
 
