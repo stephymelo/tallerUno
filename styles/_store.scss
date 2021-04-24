@@ -1,14 +1,61 @@
+.storebody{
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #172631 10.45%, rgba(85, 96, 105, 0.87) 143.29%);
+
+
+
+
+}
+li{
+  color:white;
+}
+p{
+  color:white;
+}
+.store{
+  display: flex;
+
+  &__section{
+    &--1{
+      margin-left:20px;
+      width:20%;
+    }
+    &--2{
+      width:80%;
+
+    }
+
+  }
+}
+
+.orderdiv{
+  margin-top:20px;
+}
+
+
 .list {
   display: flex;
   flex-wrap: wrap;
 }
 
+.productForm{
+  
+  &__label{
+    color:white;
+  }
+}
+.formatdiv{
+  margin-top:10px;
+  display:flex;
+}
+
 .product {
-  border: 1px solid gray;
+  // border: 1px solid gray;
   width: 300px;
   display: block;
   text-decoration: none;
   margin: 20px;
+  color: white;
 
   &__img {
     width: 100%;
@@ -24,10 +71,11 @@
   }
 
   &__price {
+    display:flex;
     margin: 0;
   }
 
   &:hover {
-    background-color: gray;
+    background-color: rgba(146, 137, 137, 0.281);
   }
 }

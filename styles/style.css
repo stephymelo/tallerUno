@@ -79,6 +79,39 @@ a:hover {
   }
 }
 
+.storebody {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10.45%, #172631), color-stop(143.29%, rgba(85, 96, 105, 0.87)));
+  background: linear-gradient(180deg, #172631 10.45%, rgba(85, 96, 105, 0.87) 143.29%);
+}
+
+li {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.store {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.store__section--1 {
+  margin-left: 20px;
+  width: 20%;
+}
+
+.store__section--2 {
+  width: 80%;
+}
+
+.orderdiv {
+  margin-top: 20px;
+}
+
 .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,12 +120,23 @@ a:hover {
       flex-wrap: wrap;
 }
 
+.productForm__label {
+  color: white;
+}
+
+.formatdiv {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .product {
-  border: 1px solid gray;
   width: 300px;
   display: block;
   text-decoration: none;
   margin: 20px;
+  color: white;
 }
 
 .product__img {
@@ -109,11 +153,14 @@ a:hover {
 }
 
 .product__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
 }
 
 .product:hover {
-  background-color: gray;
+  background-color: rgba(146, 137, 137, 0.281);
 }
 
 .footer {
@@ -1344,7 +1391,6 @@ main .burgerMenu {
 }
 
 .productformbody {
-  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background: linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
@@ -1406,6 +1452,7 @@ main .burgerMenu {
   display: flex;
   margin-left: 50px;
   margin-top: 10px;
+  padding-bottom: 70px;
 }
 
 .productForm__section--1 {
@@ -1420,7 +1467,7 @@ main .burgerMenu {
 }
 
 .productForm__section--3 {
-  margin-top: 600px;
+  margin-top: 400px;
   width: 10%;
 }
 
@@ -1439,10 +1486,12 @@ main .burgerMenu {
 }
 
 .productForm__div--4 {
+  display: block;
   margin-top: 50px;
 }
 
 .productForm__div--5 {
+  display: block;
   margin-top: 50px;
 }
 
@@ -1456,12 +1505,6 @@ main .burgerMenu {
   display: flex;
 }
 
-.productForm__checkboxes--1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .productForm__checkbox {
   margin-bottom: 0px;
   margin-left: 10px;
@@ -1470,6 +1513,7 @@ main .burgerMenu {
 
 .productForm__label {
   display: block;
+  margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -1506,11 +1550,14 @@ main .burgerMenu {
 
 .productForm__genre {
   margin-right: 30px;
-  margin-left: 30px;
   display: block;
 }
 
 .productForm__date {
   display: block;
+}
+
+.productForm__description {
+  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -57,43 +57,48 @@
 
         <section class="productForm__section--1">
             <div class="productForm__div productForm__div--1">
-                <label class="productForm__label" for="">Album name</label>
-                <input class="productForm__input" id="name" name="name" type="text">
-
-                <label class="productForm__label" for="">
-                    Debut year</label>
-                <input class="productForm__date" id="date" name="date" type="month">
+                <div>
+                    <label class="productForm__label" for="">Album name</label>
+                    <input class="productForm__input" id="name" name="name" type="text">
+                </div>
+                <div>
+                    <label class="productForm__label" for="">
+                        Debut year</label>
+                    <input class="productForm__date" id="date" name="date" type="month">
+                </div>
             </div>
 
 
 
             <div class="productForm__div productForm__div--2">
-                <label class="productForm__label" for="">
-                    Genre</label>
-                <select class="productForm__genre" id="genre" name="genre" list="genres">
-                    <option value="edm">EDM</option>
-                    <option value="synthwave">Synthwave</option>
-                    <option value="ambient">Ambient</option>
-                    <option value="avant_pop">Avant pop</option>
-                </select>
-
+                <div>
+                    <label class="productForm__label" for="">
+                        Genre</label>
+                    <select class="productForm__genre" id="genre" name="genre" list="genres">
+                        <option value="edm">EDM</option>
+                        <option value="synthwave">Synthwave</option>
+                        <option value="ambient">Ambient</option>
+                        <option value="avant_pop">Avant pop</option>
+                    </select>
+                 </div>
+            <div>
                 <label class="productForm__label"> Format </label>
-            <div class="productForm__checkboxes">
-                    <div class="productForm__checkboxes--1">
-                        <label class="productForm__label productForm__label--checkbox">Vinyl</label>
-                        <input class="productForm__checkbox" type="checkbox" name="format_vinyl">
-                    </div>
+                <div class="productForm__checkboxes">
+                        <div class="productForm__checkboxes--1">
+                            <label class="productForm__label productForm__label--checkbox">Vinyl</label>
+                            <input class="productForm__checkbox" type="checkbox" name="format_vinyl">
+                        </div>
 
-                    <div class="productForm__checkboxes--2">
-                        <label class="productForm__label productForm__label--checkbox">CD</label>
-                        <input class="productForm__checkbox" type="checkbox" name="format_cd">
-                    </div>
-                    <div class="productForm__checkboxes--3">
-                        <label class="productForm__label productForm__label--checkbox">Digital</label>
-                        <input class="productForm__checkbox" type="checkbox" name="format_digital">
+                        <div class="productForm__checkboxes--2">
+                            <label class="productForm__label productForm__label--checkbox">CD</label>
+                            <input class="productForm__checkbox" type="checkbox" name="format_cd">
+                        </div>
+                        <div class="productForm__checkboxes--3">
+                            <label class="productForm__label productForm__label--checkbox">Digital</label>
+                            <input class="productForm__checkbox" type="checkbox" name="format_digital">
+                        </div>
                     </div>
                 </div>
-
             </div>
 
 
@@ -101,22 +106,36 @@
 
 
             <div class="productForm__div productForm__div--4">
-                <label class="productForm__label" for="">Tracklist</label>
-                <div class="productForm__tracklist">
+                <div>
+                    <label class="productForm__label" for="">Tracklist</label>
                     <button class="productForm__addtrack" type="button">+</button>
-                    <input class="productForm__track" id="track" name="track" type="text">
                 </div>
+                    <div class="productForm__tracklist">
+                        <input class="productForm__track" id="track" name="track" type="text">
+                    </div>
+                
             </div>
 
             <div class="productForm__div productForm__div--5">
-                <label class="productForm__label" for="">Description</label>
-                <input class="productForm__input" id="description" name="description" type="text">
+                <div>
+                    <label class="productForm__label" for="">Artist name</label>
+                    <input class="productForm__artist" id="artist" name="description" type="text">
+                </div>
+
+                <div>
+                    <label class="productForm__label" for="">Description</label>
+                    <input class="productForm__description" id="description" name="description" type="text">
+                </div>
             </div>
             <div class="productForm__div productForm__div--6">
-                <label class="productForm__label"> Price </label>
-                <input class="productForm__input" name="price" type="number">
-                <label class="productForm__label">Select album color</label>
-                <input type="color" id="color" name="color" value="#ff0000">
+                <div>
+                    <label class="productForm__label"> Price </label>
+                    <input class="productForm__input" name="price" type="number">
+                </div>
+                <div>
+                    <label class="productForm__label">Select album color</label>
+                    <input type="color" id="color" name="color" value="#ff0000">
+                </div>
             </div>
         </section>
 

@@ -76,6 +76,8 @@ productForm.addEventListener('submit',function(event){
         date:productForm.date.value,
         format: [],
         tracklist: tempTracklist,
+        artist:productForm.artist.value,
+        color:productForm.color.value,
     };
     
     if(productForm.format_vinyl.checked) product.format.push('vinyl');

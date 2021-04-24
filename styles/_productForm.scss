@@ -1,5 +1,5 @@
 .productformbody{
-    height:100vh;
+   
     background-size: cover;
     background-repeat: no-repeat;
     background:linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
@@ -56,9 +56,11 @@
     display: flex;
     margin-left:50px;
     margin-top:10px;
+    padding-bottom: 70px;
     
 
     &__section{
+        
         &--1{
             margin-top:50px;
             width:50%;
@@ -69,7 +71,7 @@
             border-color: gray;
         }
         &--3{
-            margin-top:600px;
+            margin-top:400px;
             width:10%;
         }
     }
@@ -77,9 +79,10 @@
         display: flex;
         
         
+        
             &--1{
-               
-                
+
+                   
             }
             &--2{
                 
@@ -91,10 +94,12 @@
               
             }
             &--4{
+                display: block;
                 margin-top:50px;
               
             }
             &--5{
+                display: block;
                 margin-top:50px;
               
             }
@@ -110,8 +115,7 @@
         display: flex;
 
         &--1{
-           
-            display: flex;
+        
             
           
 
@@ -137,6 +141,7 @@
 
     &__label{
         display:block;
+        margin-top:10px;
         margin-right:10px;
         margin-bottom: 10px;
         
@@ -180,7 +185,7 @@
 
     &__genre{
         margin-right:30px;
-        margin-left:30px;
+        
         display: block;
     }
 
@@ -188,4 +193,13 @@
         display: block;
 
     }
+    &__description{
+        padding:20px;
+        
+
+    }
+
+    
+
+  
 }
