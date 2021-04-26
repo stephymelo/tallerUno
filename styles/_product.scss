@@ -1,0 +1,37 @@
+.productbody{
+    li{
+        color:black;
+        
+    }
+    p{
+        color:black;
+    }
+}
+
+.productsingle{
+
+    &__format{
+        color:black;
+    }
+    &__name{
+       
+    }
+    &__img{
+        
+    }
+    &__description{
+        
+    }
+    &__artist{
+        
+    }
+    &__genre{
+        
+    }
+
+    &__price{
+        
+    }
+
+    
+}
