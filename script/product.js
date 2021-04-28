@@ -7,12 +7,23 @@ if(!id) {
 
 const productImg = document.querySelector('.productsingle__img');
 const productName = document.querySelector('.productsingle__name');
-const productPrice = document.querySelector('.productsingle__price');
+const productPrice = document.querySelector('.actions__price');
 const productFormat = document.querySelector('.productsingle__format');
 const productGenre = document.querySelector('.productsingle__genre');
 const productArtist = document.querySelector('.productsingle__artist');
 const productDescription = document.querySelector('.productsingle__description');
+const productTracks = document.querySelector('.productsingle__tracks');
+const prooductYear = document.querySelector('.productsingle__year');
+let years= [];
+let tracklist = [];
 
+
+const cartBtn = document.querySelector('.actions__add');
+    cartBtn.addEventListener('click', function () {
+      cart.push(data);
+      localStorage.setItem('store__cart', JSON.stringify(cart));
+      cartBtnNumber.innerText = cart.length;
+    });
 
 
 function getTypeLabel (format) {
@@ -33,12 +44,27 @@ productsCol
     //   location.href = './404.html';
     // }
 
+    let yea = data.date;
+    years=yea.split("-");
+    tracklist = data.tracklist;
+
+
+
+
     productImg.setAttribute('src', data.images[0].url);
     productName.innerText = data.name;
-    productPrice.innerText = `$ ${data.price}.00`;
-    productDescription.innterText = data.description;
+    prooductYear.innerHTML = years[0];
+    productPrice.innerText = `Price: $ ${data.price}.00`;
+    productDescription.innterText = `descrip ${data.description}`;
     productArtist.innerText = data.artist;
-    productGenre.innerText = data.genre;
-    productFormat.innerHTML = `Format: <strong>${getTypeLabel(data.format)}</strong>`;
+    productGenre.innerText = `Genre: ${data.genre}`;
+    productFormat.innerHTML = `Format: <strong>${(data.format)}</strong>`;
+
+    // tracklist
+    for (i = 0; i < tracklist.length; i++) {
+      console.log(tracklist[1]);
+      return productTracks.innerHTML = "<li>" + tracklist[i] + "</li>";
+      
+    }
     console.log(data.format);
   });

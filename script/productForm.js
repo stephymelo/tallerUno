@@ -162,6 +162,9 @@ productForm.addEventListener('submit',function(event){
 });
 
 
+if(!loggedUser || !loggedUser.admin) {
+  location.href = '/store.html';
+}
     
 
 

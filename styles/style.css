@@ -79,6 +79,13 @@ a:hover {
   }
 }
 
+.productbody {
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
+}
+
 .productbody li {
   color: black;
 }
@@ -87,8 +94,110 @@ a:hover {
   color: black;
 }
 
+.productbody hr {
+  border-width: 2px;
+}
+
+.productsingle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productsingle--1 {
+  width: 40%;
+}
+
+.productsingle--2 {
+  width: 30%;
+  margin-right: 30px;
+}
+
+.productsingle--3 {
+  width: 30%;
+  margin-right: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.productsingle--3 .tracksdiv {
+  margin-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+
 .productsingle__format {
   color: black;
+}
+
+.productsingle__name {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.productsingle__track {
+  font-size: 25px;
+}
+
+.productsingle__artist {
+  font-size: 20px;
+}
+
+.productsingle__year {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.productsingle__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productsingle__img {
+  margin-top: 80px;
+  margin-left: 120px;
+  width: 50%;
+}
+
+.productsingle__description {
+  color: black;
+  margin-top: 80px;
+}
+
+.actions {
+  margin-left: 500px;
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.actions__price {
+  margin-left: 20px;
+}
+
+.actions__buy {
+  background-color: #1A799D;
+  margin-left: 100px;
+}
+
+.actions__add {
+  margin-left: 20px;
 }
 
 .authButtons :hover {
@@ -228,12 +337,27 @@ p {
   color: white;
 }
 
+.product__cartBtn {
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  height: 50%;
+}
+
 .product__img {
   width: 100%;
 }
 
 .product__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 10px;
+}
+
+.product__info--2 {
+  margin-left: 40px;
 }
 
 .product__title {
@@ -242,10 +366,7 @@ p {
 }
 
 .product__price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
+  padding-right: 40px;
 }
 
 .product:hover {

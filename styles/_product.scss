@@ -1,4 +1,8 @@
 .productbody{
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background:linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
     li{
         color:black;
         
@@ -6,25 +10,81 @@
     p{
         color:black;
     }
+    hr{
+        border-width: 2px;
+    }
 }
 
 .productsingle{
+    display: flex;
+    &--1{
+        width:40%;
+
+    }
+    &--2{
+        width:30%;
+        margin-right:30px;
+
+    }
+    &--3{
+        width:30%;
+        margin-right:60px;
+        
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .tracksdiv{
+            margin-top:10px;
+            padding-bottom:30px;
+            padding-left:60px;
+            padding-right:60px;
+            padding-top:20px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 5px;
+
+        }
+
+    }
+    
 
     &__format{
         color:black;
     }
     &__name{
+        font-weight:600;
+        font-size:25px;
        
     }
-    &__img{
-        
-    }
-    &__description{
-        
+    &__track{
+        font-size:25px;
+       
     }
     &__artist{
+        font-size:20px;
+    }
+
+    &__year{
+        font-size:20px;
+        margin-left:20px;
         
     }
+
+    &__div{
+        display:flex;
+    }
+    &__img{
+        margin-top:80px;
+        margin-left:120px;
+        width:50%;
+    }
+    &__description{
+        color:black;
+        margin-top:80px;
+        
+    }
+    
     &__genre{
         
     }
@@ -33,5 +93,29 @@
         
     }
 
+    
+    
+}
+
+.actions{
+    margin-left:500px;
+    margin-top:70px;
+    display:flex;
+
+    &__price{
+        margin-left:20px;
+    }
+
+    &__buy{
+        background-color:#1A799D;
+        margin-left:100px;
+        
+    }
+
+    &__add{
+        margin-left:20px;
+        
+        
+    }
     
 }

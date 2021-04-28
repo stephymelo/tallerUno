@@ -31,13 +31,39 @@
   </header>
 
   <article class="productsingle">
-    <img class="productsingle__img" src="" />
-    <h1 class="productsingle__name"></h1>
-    <h3 class="productsingle__price"></h3>
-    <p class="productsingle__format"></p>
-    <p class="productsingle__description"></p>
-    <p class="productsingle__artist"></p>
-    <p class="productsingle__genre"></p>
+    
+    <section class="productsingle--1">
+      <img class="productsingle__img" src="" />
+    </section>
+
+    <section class="productsingle--2">
+      <h1 class="productsingle__name"></h1>
+      <div class="productsingle__div">
+        <p class="productsingle__artist"></p>
+        <p class="productsingle__year"></p>
+      </div>
+      <hr>
+      <p class="productsingle__description"></p>
+      <p class="productsingle__format"></p>
+      <p class="productsingle__genre"></p>
+    </section>
+
+    <section class="productsingle--3">
+      <p class="productsingle__track">Tracks</p>
+      <div class="tracksdiv">
+        <div class="productsingle__tracks"></div>
+      </div>
+      
+    </section>
+
+  </article>
+
+  <article class="actions">
+    <p class="actions__price"></p>
+
+    <button class="actions__buy">Buy now</button>
+    <button class="actions__add">Add to cart</button>
+
   </article>
 
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>

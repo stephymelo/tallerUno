@@ -11,3 +11,29 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
 const productsCol = db.collection('products');
+
+let loggedUser = null;
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    db.collection('users').doc(user.uid).get().then(function (doc) {
+      loggedUser = doc.data();
+      loggedUser.uid = user.uid;
+      userAuthChanged(true);
+    });
+  } else {
+    loggedUser = null;
+    userAuthChanged(false);
+  }
+});
+
+let cart = [];
+const cartBtnNumber = document.querySelector('.cartBtn span');
+
+const cartFromLS = localStorage.getItem('store__cart');
+if(cartFromLS) {
+  cart = JSON.parse(cartFromLS);
+  if(cartBtnNumber) {
+    cartBtnNumber.innerText = cart.length;
+  }
+}

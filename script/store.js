@@ -13,16 +13,33 @@ const handleCollectionResult = (querySnapshot) => {
     product.innerHTML = `
         <img class="product__img" src="${img}" alt="">
         <div class="product__info">
-          <h1 class="product__title">
-            ${data.name} <br> ${data.artist}
-          </h1>
-          <h3 class="product__price">$ ${data.price}.00 USD </h3>
+          <div class="product__info product__info--1">
+            <h1 class="product__title">
+              <strong>${data.name} </strong><br> ${data.artist}
+            </h1>
+          </div>
+          <div class="product__info product__info--2">
+            <h3 class="product__price">$ ${data.price}.00 USD </h3>
+            <button class="product__cartBtn">+</button>
+          </div>
         </div>
+        
       `;
     product.classList.add('product');
     product.setAttribute('href', `./product.html?id=${doc.id}&name=${data.name}`);
 
     list.appendChild(product);
+
+
+    // add a Carrito
+    const cartBtn = product.querySelector('.product__cartBtn');
+    cartBtn.addEventListener('click', function () {
+      cart.push(data);
+      localStorage.setItem('store__cart', JSON.stringify(cart));
+      cartBtnNumber.innerText = cart.length;
+    });
+
+
   });
 }
 
@@ -33,7 +50,7 @@ filters.addEventListener('change', function () {
 
   const types = [];
   //checkboxitos
-  filters.test.forEach(function (checkbox) {
+  filters.format.forEach(function (checkbox) {
     if (checkbox.checked) {
       types.push(checkbox.getAttribute('data-type'));
       console.log(types[0]);
@@ -44,8 +61,8 @@ filters.addEventListener('change', function () {
     productsCollection = productsCollection.where('format', 'in', types);
     
     }
-    if(filters.test.value) {
-    productsCollection = productsCollection.where('format', '==', filters.test.value);
+    if(filters.format.value) {
+    productsCollection = productsCollection.where('format', '==', filters.format.value);
     }
 
   //price cambiar a checkbox
@@ -101,3 +118,6 @@ if (params.get('type')) {
 }
 
 productsCollection.get().then(handleCollectionResult);
+
+
+
