@@ -54,11 +54,11 @@ body button {
   width: fit-content;
 }
 
-a {
+body a {
   text-decoration: none;
 }
 
-a:hover {
+body a :hover {
   text-decoration: underline;
 }
 
@@ -77,6 +77,118 @@ a:hover {
     padding: 5px 20px 5px 20px;
     outline: 0px;
   }
+}
+
+.cartbody {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
+}
+
+.cartbody h2 {
+  font-size: 24px;
+}
+
+.cartbody p {
+  color: black;
+}
+
+.cartbody li {
+  color: black;
+}
+
+.cartbody a {
+  color: black;
+}
+
+.cartbody hr {
+  border-color: gray;
+}
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart__section--1 {
+  margin-left: 40px;
+  margin-right: 30px;
+  width: 70%;
+}
+
+.cart__section--2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+  border-width: 1.5px;
+  height: 50vh;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.productcheckout {
+  text-decoration: none;
+  margin: 20px;
+  color: white;
+}
+
+.productcheckout__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productcheckout__pricediv {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.productcheckout__img {
+  width: 20%;
+}
+
+.productcheckout__info {
+  margin-left: 100px;
+  padding: 10px;
+}
+
+.productcheckout__info--1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productcheckout__title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.productcheckout__delete {
+  margin-top: 40px;
+  color: #315d96;
+  background-color: transparent;
+  font-size: 15px;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
 }
 
 .productbody {
@@ -283,6 +395,10 @@ a:hover {
   background: linear-gradient(180deg, #172631 10.45%, rgba(85, 96, 105, 0.87) 143.29%);
 }
 
+a {
+  color: white;
+}
+
 li {
   color: white;
 }
@@ -304,6 +420,10 @@ p {
 
 .store__section--2 {
   width: 80%;
+}
+
+.orderselector {
+  width: 50%;
 }
 
 .orderdiv {

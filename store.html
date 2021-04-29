@@ -22,8 +22,8 @@
     <nav class="navegacion">
       <!-- <section class="authButtons"></section> -->
       <ul class="navegacion__list">
-        <li><a href="store.html"></a>Store</li>
-        <li><a href="cart.html"></a>Cart</li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="cart.html">Cart</a></li>
         <li> Discover <input type="text"></input></li>
         <li class="authButtons"> Log in</li>
       </ul>
@@ -37,18 +37,10 @@
   <article class="store">
     <section class="store__section--1">
       <form class="filters">
-        <div>
-          <label for="price" class="productForm__label">Price range</label>
-          <select id="price" class="productForm__input" name="price">
-            <option value="">Select a type</option>
-            <option value="0">less than $10.00</option>
-            <option value="1">between $10.00 and $30.00</option>
-            <option value="2">more than $30.00</option>
-          </select>
-        </div>
+        
         <!-- ORDENAR SELECTORS -->
         <label for="order" class="productForm__label">Order</label>
-        <select id="order" class="productForm__input" name="order">
+        <select id="order" class="productForm__input orderselector" name="order">
           <option value="">Order by</option>
           <option value="price_asc">Price (less expensive to most expensive)</option>
           <option value="price_desc">Price (most expensive to less expensive)</option>
@@ -73,26 +65,45 @@
           </div>
         </div>
 
+        <div class="orderdiv">
+          <p>Price Range</p>
+          <div class="formatdiv">
+            <input data-type="0" class="productForm__checkbox" type="radio" name="pricevalue">
+            <label class="productForm__label productForm__label--checkbox"> less than $10.00</label>
+          </div>
+          <div class="formatdiv">
+            <input data-type="1" class="productForm__checkbox" type="radio" name="pricevalue">
+            <label class="productForm__label productForm__label--checkbox"> between $10.00 and $30.00</label>
+          </div>
+          <div class="formatdiv">
+            <input data-type="2" class="productForm__checkbox" type="radio" name="pricevalue">
+            <label class="productForm__label productForm__label--checkbox"> more than $30.00</label>
+          </div>
+            
+            
+
+        </div>
+
 
         <div class="orderdiv">
           <p>Genre</p>
           <div class="formatdiv">
-            <input data-type="edm" class="productForm__checkbox" type="checkbox" name="test">
+            <input data-type="edm" class="productForm__checkbox" type="radio" name="genero">
             <label class="productForm__label productForm__label--checkbox"> EDM</label>
           </div>
 
           <div class="formatdiv">
-            <input data-type="synthwave" class="productForm__checkbox" type="checkbox" name="test">
+            <input data-type="synthwave" class="productForm__checkbox" type="radio" name="genero">
             <label class="productForm__label productForm__label--checkbox"> Synthwave</label>
           </div>
 
           <div class="formatdiv">
-            <input data-type="ambient" class="productForm__checkbox" type="checkbox" name="test">
+            <input data-type="ambient" class="productForm__checkbox" type="radio" name="genero">
             <label class="productForm__label productForm__label--checkbox"> Ambient</label>
           </div>
 
           <div class="formatdiv">
-            <input data-type="alternative" class="productForm__checkbox" type="checkbox" name="test">
+            <input data-type="alternative" class="productForm__checkbox" type="radio" name="genero">
             <label class="productForm__label productForm__label--checkbox"> Alternative</label>
           </div>
         </div>

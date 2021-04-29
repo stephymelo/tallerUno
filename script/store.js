@@ -1,15 +1,15 @@
 const list = document.querySelector('.list');
 
+let productslist = [];
+
+
 const handleCollectionResult = (querySnapshot) => {
   list.innerHTML = '';
   querySnapshot.forEach((doc) => {
     const data = doc.data();
     const product = document.createElement('a');
     let img = data.images[0]?.url;
-
-    //   if(!img) {
-    //     img = './images/placeholder-image.png';
-    //   }
+  
     product.innerHTML = `
         <img class="product__img" src="${img}" alt="">
         <div class="product__info">
@@ -38,50 +38,61 @@ const handleCollectionResult = (querySnapshot) => {
       localStorage.setItem('store__cart', JSON.stringify(cart));
       cartBtnNumber.innerText = cart.length;
     });
-
+  
 
   });
 }
 
 const filters = document.querySelector('.filters');
 
+
 filters.addEventListener('change', function () {
   let productsCollection = db.collection('products');
+  
 
   const types = [];
   //checkboxitos
   filters.format.forEach(function (checkbox) {
     if (checkbox.checked) {
       types.push(checkbox.getAttribute('data-type'));
-      console.log(types[0]);
-      // console.log(checkbox.getAttribute('data-type')+"check");
+      
     }
   });
   if(types.length >0){
-    productsCollection = productsCollection.where('format', 'in', types);
+    productsCollection = productsCollection.where('format', 'array-contains-any', types);
+    //array contains any y contains - exactamente iguales, any que tenga almenos una
+    }
+
+    //Genre Checkbox
+    let generotypes;
+    filters.genero.forEach(function (radio) {
+      if (radio.checked) {
+        generotypes=radio.getAttribute('data-type');
+        
+      }
+    });
+
+    if(generotypes){
+      productsCollection = productsCollection.where('genre', '==', generotypes);
+      }
+     
+
+   filters.pricevalue.forEach(function(radio){
+      if (radio.checked) {
+        switch (radio.getAttribute('data-type')) {
+          case '0':
+            productsCollection = productsCollection.where('price', '<', 10);
+            break;
+          case '1':
+            productsCollection = productsCollection.where('price', '>=', 10).where('price', '<', 30);
+            break;
+          case '2':
+            productsCollection = productsCollection.where('price', '>=', 30);
+            break;
+        }
+      }
+    });
     
-    }
-    if(filters.format.value) {
-    productsCollection = productsCollection.where('format', '==', filters.format.value);
-    }
-
-  //price cambiar a checkbox
-
-  if (filters.price.value) {
-    switch (filters.price.value) {
-      case '0':
-        productsCollection = productsCollection.where('price', '<', 10);
-        break;
-      case '1':
-        productsCollection = productsCollection.where('price', '>=', 10).where('price', '<', 30);
-        break;
-      case '2':
-        productsCollection = productsCollection.where('price', '>=', 30);
-        break;
-    }
-  }
-
-
   ///ordernar selectors
 
   if (filters.order.value) {
@@ -118,6 +129,3 @@ if (params.get('type')) {
 }
 
 productsCollection.get().then(handleCollectionResult);
-
-
-

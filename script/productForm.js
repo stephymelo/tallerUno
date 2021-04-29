@@ -16,7 +16,6 @@ tracklistArray.push(firstTrack);
 // tracklist
 addTrackBtn.addEventListener('click',function(event){
     event.preventDefault();
-    console.log("alo");
     const newTrack = document.createElement("input");
     newTrack.name = "track";
     newTrack.classList.add('productForm__track');

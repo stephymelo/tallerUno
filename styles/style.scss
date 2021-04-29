@@ -45,14 +45,19 @@ body {
         border-style: none;
         width: fit-content;
     }
+
+    a{
+        
+        text-decoration: none;
+        :hover{
+            text-decoration: underline;
+        }
+    }
+    
+    
+    
 }
 
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
 
 
 
@@ -94,7 +99,7 @@ a:hover {
 
 
 
-
+@import "./_cart.scss";
 @import "./_product.scss";
 @import "./_modal.scss";
 @import "./_store.scss";

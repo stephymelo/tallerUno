@@ -4,14 +4,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <title>My Cart</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
+<body class="cartbody">
+    <header class="header">
+        <div>
+          <img src="./recursos/bandcamplogoOne.png" class="header__img">
+        </div>
+        <nav class="navegacion">
+          <!-- <section class="authButtons"></section> -->
+          <ul class="navegacion__list">
+            <li><a href="./store.html">Store</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+            <li> Discover <input type="text"></input></li>
+            <li class="authButtons"> Log in</li>
+          </ul>
+        </nav>
+        <!-- <button class="burgerMenu">
+            <img src="./recursos/menuHamburger.png">
+        </button> -->
+      </header>
 
-  <section class="cartList">
+    </article>
+    <article class="cart__not-products hidden">
+      <h1>Not Current Products</h1>
+      <a href="./shop.html">
+        <button>Return To Shop</button>
+      </a>
+    </article>
+<article class="cart">
+    <section class="cart__section--1">
     
-  </section>
+    </section>
+    <section class="cart__section--2">
+        <h2>Checkout</h2>
+        <p class="subtotal"></p>
+        <p>Free shipping</p>
+        <button class="paybtn">Proceed to pay</button>
+
+    </section>
+
+</article>
+  
 
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
@@ -19,8 +55,10 @@
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
 
   <script src="./script/firebasestor.js"></script>
+  
+  <script src="./script/authUtil.js"></script>
+  <script src="./script/authModal.js"></script>
   <script src="./script/cart.js"></script>
-  <script src="./script/authUtils.js"></script>
 
 </body>
 </html>
