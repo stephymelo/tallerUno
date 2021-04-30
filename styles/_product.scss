@@ -2,7 +2,8 @@
     background-size: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background:linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
+    --productgradientcolor:#91AFDC ;
+    background:linear-gradient(182.2deg, #FEFEFF 66.38%, var(--productgradientcolor) 98.23%);
     li{
         color:black;
         

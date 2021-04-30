@@ -5,6 +5,7 @@ if(!id) {
   location.href = './404.html';
 }
 
+const productBody = document.querySelector('.productbody');
 const productImg = document.querySelector('.productsingle__img');
 const productName = document.querySelector('.productsingle__name');
 const productPrice = document.querySelector('.actions__price');
@@ -51,6 +52,8 @@ productsCol
 
 
 
+
+    productBody.style.setProperty("--productgradientcolor", data.color);
     productImg.setAttribute('src', data.images[0].url);
     productName.innerText = data.name;
     prooductYear.innerHTML = years[0];
@@ -63,7 +66,7 @@ productsCol
     // tracklist
     for (i = 0; i < tracklist.length; i++) {
       console.log(tracklist[1]);
-      return productTracks.innerHTML = "<li>" + tracklist[i] + "</li>";
+       productTracks.innerHTML += "<li>" + tracklist[i] + "</li>";
       
     }
     console.log(data.format);

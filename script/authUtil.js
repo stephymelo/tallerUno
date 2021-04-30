@@ -25,4 +25,18 @@ function userAuthChanged (loggedIn) {
         elem.classList.add('hidden');
       }
     });
+
+    const showProductform = document.querySelectorAll('.adminli');
+    showProductform.forEach(function (elem) {
+      if(loggedIn && loggedUser.admin) {
+        elem.classList.remove('hidden');
+      } else {
+        elem.classList.add('hidden');
+      }
+    });
+
+
   }
+
+  
+  

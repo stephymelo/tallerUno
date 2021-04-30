@@ -1,5 +1,5 @@
 const list = document.querySelector('.list');
-
+const productform = document.querySelector('.adminli');
 let productslist = [];
 
 
@@ -30,6 +30,8 @@ const handleCollectionResult = (querySnapshot) => {
 
     list.appendChild(product);
 
+     
+
 
     // add a Carrito
     const cartBtn = product.querySelector('.product__cartBtn');
@@ -42,6 +44,8 @@ const handleCollectionResult = (querySnapshot) => {
 
   });
 }
+
+
 
 const filters = document.querySelector('.filters');
 
@@ -129,3 +133,13 @@ if (params.get('type')) {
 }
 
 productsCollection.get().then(handleCollectionResult);
+
+
+//
+// if(!loggedUser){
+//   authModal.classList.add('modal-active'); 
+// }else{
+//   if(loggedUser.admin){
+//     productform.innerHTML=`<a href="./productForm.html">Product</a>`;
+//   }
+//   }

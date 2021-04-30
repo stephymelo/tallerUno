@@ -38,7 +38,7 @@ cart.forEach((data) => {
    <div>
    
   </div>  
-  <hr>e
+  <hr>
   `;
 
   list.appendChild(product);

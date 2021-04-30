@@ -86,6 +86,7 @@ body a :hover {
 }
 
 .cartbody h2 {
+  margin-top: 20px;
   font-size: 24px;
 }
 
@@ -135,6 +136,14 @@ body a :hover {
   border-style: solid;
   border-radius: 10px;
   width: 30%;
+}
+
+.cart__section--2 .subtotal {
+  margin-top: 50px;
+}
+
+.cart__section--2 .paybtn {
+  margin-top: 80px;
 }
 
 .productcheckout {
@@ -195,7 +204,8 @@ body a :hover {
   background-size: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
+  --productgradientcolor:#91AFDC ;
+  background: linear-gradient(182.2deg, #FEFEFF 66.38%, var(--productgradientcolor) 98.23%);
 }
 
 .productbody li {
@@ -1726,6 +1736,22 @@ main .burgerMenu {
   background: linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
 }
 
+.productformbody li {
+  color: black;
+}
+
+.productformbody a {
+  color: black;
+}
+
+.productformbody p {
+  color: black;
+}
+
+.productformbody label {
+  color: black;
+}
+
 .header {
   width: 100%;
   display: -webkit-box;
@@ -1822,11 +1848,11 @@ main .burgerMenu {
 
 .productForm__div--5 {
   display: block;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .productForm__div--6 {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .productForm__checkboxes {
@@ -1888,6 +1914,7 @@ main .burgerMenu {
 }
 
 .productForm__description {
-  padding: 20px;
+  height: 100px;
+  width: 400px;
 }
 /*# sourceMappingURL=style.css.map */

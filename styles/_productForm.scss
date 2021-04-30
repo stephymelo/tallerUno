@@ -3,6 +3,20 @@
     background-size: cover;
     background-repeat: no-repeat;
     background:linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
+    li{
+        color:black;
+
+    }
+    a{
+        color:black;
+
+    }
+    p{
+        color:black;
+    }
+    label{
+        color:black;
+    }
 }
 
 .header {
@@ -100,11 +114,11 @@
             }
             &--5{
                 display: block;
-                margin-top:50px;
+                margin-top:30px;
               
             }
             &--6{
-                margin-top:50px;
+                margin-top:40px;
               
             }
         
@@ -194,7 +208,8 @@
 
     }
     &__description{
-        padding:20px;
+        height:100px;
+        width:400px;
         
 
     }
