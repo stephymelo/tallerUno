@@ -96,6 +96,10 @@ body {
  
         .header {
           height:100px;
+          
+          &__img{
+            display:none;
+          }
          
           .div{
             padding-right:0;

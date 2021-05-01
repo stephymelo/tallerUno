@@ -84,6 +84,9 @@ body a :hover {
   .header {
     height: 100px;
   }
+  .header__img {
+    display: none;
+  }
   .header .div {
     padding-right: 0;
   }
@@ -1937,7 +1940,7 @@ main .burgerMenu {
 }
 
 .productForm__btn {
-  margin-top: 50px;
+  margin-top: 280px;
 }
 
 .productForm__track {
