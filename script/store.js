@@ -108,15 +108,11 @@ filters.addEventListener('change', function () {
         productsCollection = productsCollection.orderBy('price', 'desc');
         break;
       case 'alpha':
-        if (filters.price.value) {
-          productsCollection = productsCollection.orderBy('price', 'asc');
-        }
+        
         productsCollection = productsCollection.orderBy('name', 'asc');
         break;
       case 'createdAt':
-        if (filters.price.value) {
-          productsCollection = productsCollection.orderBy('price', 'asc');
-        }
+       
         productsCollection = productsCollection.orderBy('createdAt', 'desc');
         break;
     }
