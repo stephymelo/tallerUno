@@ -18,8 +18,13 @@
 
 .productsingle{
     display: flex;
+    height:80vh;
     &--1{
         width:40%;
+        height:80%;
+        position: relative;
+        overflow:hidden;
+       
 
     }
     &--2{
@@ -48,7 +53,21 @@
         }
 
     }
-    
+
+
+    &__checkboxes{
+        position:absolute;
+        bottom:0;
+        right:50;
+        display:flex;
+    }
+
+    &__imgdiv{
+        position: absolute;
+        display: flex;
+        
+        width:100%;
+    }
 
     &__format{
         color:black;
@@ -78,7 +97,10 @@
     &__img{
         margin-top:80px;
         margin-left:120px;
-        width:50%;
+        width:200px;
+           
+
+        
     }
     &__description{
         color:black;

@@ -214,6 +214,12 @@
         
 
     }
+    &__images{
+        display:flex;
+        & img{
+            width:30%;
+        }
+    }
 
     
 

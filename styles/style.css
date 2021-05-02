@@ -275,10 +275,14 @@ body a :hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 80vh;
 }
 
 .productsingle--1 {
   width: 40%;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
 }
 
 .productsingle--2 {
@@ -313,6 +317,23 @@ body a :hover {
   border-radius: 5px;
 }
 
+.productsingle__checkboxes {
+  position: absolute;
+  bottom: 0;
+  right: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productsingle__imgdiv {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 .productsingle__format {
   color: black;
 }
@@ -344,7 +365,7 @@ body a :hover {
 .productsingle__img {
   margin-top: 80px;
   margin-left: 120px;
-  width: 50%;
+  width: 200px;
 }
 
 .productsingle__description {
@@ -1967,5 +1988,15 @@ main .burgerMenu {
 .productForm__description {
   height: 100px;
   width: 400px;
+}
+
+.productForm__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productForm__images img {
+  width: 30%;
 }
 /*# sourceMappingURL=style.css.map */
