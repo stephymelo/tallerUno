@@ -113,7 +113,7 @@ filters.addEventListener('change', function () {
         break;
       case 'createdAt':
        
-        productsCollection = productsCollection.orderBy('createdAt', 'desc');
+        productsCollection = productsCollection.orderBy('date', 'desc');
         break;
     }
   }

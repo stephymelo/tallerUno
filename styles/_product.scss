@@ -8,6 +8,9 @@
         color:black;
         
     }
+    a{
+        color:black;
+    }
     p{
         color:black;
     }
@@ -18,16 +21,18 @@
 
 .productsingle{
     display: flex;
-    height:80vh;
+    height:70vh;
     &--1{
-        width:40%;
-        height:80%;
+        margin-top:80px;
+        width:20%;
         position: relative;
         overflow:hidden;
+        margin-left:80px;
        
 
     }
     &--2{
+        margin-left:160px;
         width:30%;
         margin-right:30px;
 
@@ -35,7 +40,6 @@
     &--3{
         width:30%;
         margin-right:60px;
-        
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -57,19 +61,28 @@
 
     &__checkboxes{
         position:absolute;
-        bottom:0;
-        right:50;
+        top:300px;
+        left:110px;
         display:flex;
     }
 
     &__imgdiv{
         position: absolute;
         display: flex;
-        
         width:100%;
+        // & img{
+        //     margin-top:80px;
+        //     margin-left:120px;
+        //     width:200px;
+                   
+        
+                
+            
+        // }
     }
 
     &__format{
+        margin-top:20px;
         color:black;
     }
     &__name{
@@ -80,6 +93,10 @@
     &__track{
         font-size:25px;
        
+    }
+    &__trackslist{
+        margin-top:5px;
+
     }
     &__artist{
         font-size:20px;
@@ -94,39 +111,31 @@
     &__div{
         display:flex;
     }
-    &__img{
-        margin-top:80px;
-        margin-left:120px;
-        width:200px;
-           
-
-        
-    }
+    
     &__description{
         color:black;
-        margin-top:80px;
+        margin-top:20px;
         
     }
     
     &__genre{
+        margin-top:20px;
         
     }
 
-    &__price{
-        
-    }
-
+   
     
     
 }
 
 .actions{
+    margin-bottom:53px;
     margin-left:500px;
-    margin-top:70px;
     display:flex;
 
     &__price{
         margin-left:20px;
+        font-weight: 600;
     }
 
     &__buy{

@@ -41,17 +41,7 @@
 
 
 
-        <p class="productForm__loader hidden">
-            Loading...
-        </p>
-
-        <p class="productForm__success hidden">
-            Document successfully added
-        </p>
-
-        <p class="productForm__error hidden">
-            We had a problem, try again
-        </p>
+      
 
 
         <section class="productForm__section--1">
@@ -115,17 +105,7 @@
                 
             </div>
 
-            <div class="productForm__div productForm__div--5">
-                <div>
-                    <label class="productForm__label" for="">Artist name</label>
-                    <input class="productForm__artist" id="artist" name="artist" type="text">
-                </div>
-
-                <div>
-                    <label class="productForm__label" for="">Description</label>
-                    <input class="productForm__description" id="description" name="description" type="text">
-                </div>
-            </div>
+        
             <div class="productForm__div productForm__div--6">
                 <div>
                     <label class="productForm__label"> Price </label>
@@ -140,6 +120,18 @@
 
         <!-- Section Add images -->
         <section class="productForm__section--2">
+            <div class="productForm__div productForm__div--5">
+                <div>
+                    <label class="productForm__label" for="">Artist name</label>
+                    <input class="productForm__artist" id="artist" name="artist" type="text">
+                </div>
+
+                <div>
+                    <label class="productForm__label" for="">Description</label>
+                    <textarea class="productForm__description" id="description" name="description" type="text" rows = "5" cols = "60"></textarea>
+                    <!-- <input class="productForm__description" id="description" name="description" type="text"> -->
+                </div>
+            </div>
             <label class="productForm__label" for="">Add images</label>
 
             <div class="productForm__images"></div>
@@ -147,6 +139,17 @@
                 type="file">
 
 
+                <p class="productForm__loader hidden">
+                    Loading...
+                </p>
+        
+                <p class="productForm__success hidden">
+                    Document successfully added
+                </p>
+        
+                <p class="productForm__error hidden">
+                    We had a problem, try again
+                </p>
         </section>
 
         <section class="productForm__section--3">

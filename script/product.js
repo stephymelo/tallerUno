@@ -82,7 +82,7 @@ productsCol
 
         if (productcheck[index].checked) {
           const widthNew = productimgdiv.clientWidth;
-          productimgdiv.style.transform = 'translate(-' + (widthNew*index)+ 'px)';
+          productimgdiv.style.transform = 'translate(-' + (widthNew*index)+ 'px,0px)';
           // productimgdiv.style.left = `${index * 400}px`
           
           console.log(widthNew+"width");
@@ -110,7 +110,7 @@ productsCol
     productName.innerText = data.name;
     prooductYear.innerHTML = years[0];
     productPrice.innerText = `Price: $ ${data.price}.00`;
-    productDescription.innerText = `descrip ${data.description}`;
+    productDescription.innerText = data.description;
     productArtist.innerText = data.artist;
     productGenre.innerText = `Genre: ${data.genre}`;
     productFormat.innerHTML = `Format: <strong>${(data.format)}</strong>`;
@@ -118,7 +118,7 @@ productsCol
     // tracklist
     for (i = 0; i < tracklist.length; i++) {
       console.log(tracklist[1]);
-      productTracks.innerHTML += "<li>" + tracklist[i] + "</li>";
+      productTracks.innerHTML += `<li class="productsingle__trackslist"> ${(tracklist[i])} </li>`;
 
     }
     console.log(data.format);
