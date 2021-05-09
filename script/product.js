@@ -17,6 +17,8 @@ const productTracks = document.querySelector('.productsingle__tracks');
 const prooductYear = document.querySelector('.productsingle__year');
 const productimgdiv = document.querySelector('.productsingle__imgdiv');
 const productcheckboxes = document.querySelector('.productsingle__checkboxes');
+const productDivnew = document.querySelector('.productsingle__imgnew');
+
 let years = [];
 let tracklist = [];
 let arrayimg = [];
@@ -24,11 +26,27 @@ let checkboxes = [];
 
 
 const cartBtn = document.querySelector('.actions__add');
+
+// cartBtn.addEventListener('click', function () {
+//   cart.push(data);
+//   localStorage.setItem('store__cart', JSON.stringify(cart));
+//   cartBtnNumber.innerText = cart.length;
+// });
+
+const handleCollectionResult = (querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
 cartBtn.addEventListener('click', function () {
-  cart.push(data);
-  localStorage.setItem('store__cart', JSON.stringify(cart));
-  cartBtnNumber.innerText = cart.length;
+  addToMyCart({
+    ...data,
+    id: doc.id,
+  });
+  //localStorage.setItem('store__cart', JSON.stringify(cart));
 });
+});
+
+}
+
 
 
 function getTypeLabel(format) {
@@ -67,6 +85,13 @@ productsCol
     });
     console.log(arrayimg[0]);
     productimgdiv.innerHTML = arrayimg;
+    // if(clientWidth<=100){
+    //   productDivnew.innerHTML = arrayimg;
+
+    // }else{
+    //   productimgdiv.innerHTML = arrayimg;
+
+    // }
 
 
 

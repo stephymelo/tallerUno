@@ -4,15 +4,15 @@ const sub = document.querySelector('.subtotal');
 var numeroitems;
 var subtotal;
 let total = 0;
-
-cart.forEach((data) => {
-  const product = document.createElement('div');
-  let img = data.images[0]?.url;
-//   if(!img) {
-//     img = './images/placeholder-image.png';
-//   }
-  product.classList.add('productcheckout');
-  product.innerHTML = `
+renderCart = () => {
+  cart.forEach((data) => {
+    const product = document.createElement('div');
+    let img = data.images[0]?.url;
+    //   if(!img) {
+    //     img = './images/placeholder-image.png';
+    //   }
+    product.classList.add('productcheckout');
+    product.innerHTML = `
  
   <div class="productcheckout__div">
     <img class="productcheckout__img" src="${img}" alt="">
@@ -41,35 +41,36 @@ cart.forEach((data) => {
   <hr>
   `;
 
-  list.appendChild(product);
-  total += data.price;
-  numeroitems += data.length;
-  let num = parseInt(numeroitems);
-  console.log(num);
-   
-});
+    list.appendChild(product);
+    total += data.price;
+    numeroitems += data.length;
+    let num = parseInt(numeroitems);
+    console.log(num);
+
+  });
+}
 
 
 const deletebtn = document.querySelector('.productcheckout__delete');
 
-deletebtn.addEventListener('click',function(event){
-    event.preventDefault();
-    console.log("alo");
+deletebtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  console.log("alo");
 
-    // productsCol.doc("").delete().then(() => {
-    //     console.log("Document successfully deleted!");
-    // }).catch((error) => {
-    //     console.error("Error removing document: ", error);
-    // });
+  // productsCol.doc("").delete().then(() => {
+  //     console.log("Document successfully deleted!");
+  // }).catch((error) => {
+  //     console.error("Error removing document: ", error);
+  // });
 
 });
 
 
 /// suma de los precios
 
-subtotal= total.toString();
+subtotal = total.toString();
 
-sub.innerHTML=`Total: $`+subtotal+`.00`;
+sub.innerHTML = `Total: $` + subtotal + `.00`;
 
 
 

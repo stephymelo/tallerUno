@@ -153,5 +153,165 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .productbody{
+        background-size: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        --productgradientcolor:#91AFDC ;
+        background:linear-gradient(182.2deg, #FEFEFF 66.38%, var(--productgradientcolor) 98.23%);
+        li{
+            color:black;
+            
+        }
+        a{
+            color:black;
+        }
+        p{
+            color:black;
+        }
+        hr{
+            border-width: 2px;
+        }
+    }
+    
+    .productsingle{
+        display: flex;
+        flex-direction: column;
+        height:100%;
+       
+        align-items: center;
+        &--1{
+            margin-top:20px;
+            width:60%;
+            height:30vh;
+            position: relative;
+            overflow:hidden;
+            margin-left:0px;
+           
+    
+        }
+        &--2{
+            margin-left:0px;
+            width:100%;
+            margin-right:0px;
+    
+        }
+        &--3{
+            width:100%;
+            margin-right:0px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            .tracksdiv{
+                margin-top:10px;
+                padding-bottom:30px;
+                padding-left:60px;
+                padding-right:60px;
+                padding-top:20px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: black;
+                border-radius: 5px;
+    
+            }
+    
+        }
+    
+    
+        &__checkboxes{
+            position:absolute;
+            top:155px;
+            left:50px;
+            display:flex;
+        }
+    
+        &__imgdiv{
+            position: absolute;
+            display: flex;
+            width:100%;
+            // & img{
+            //     margin-top:80px;
+            //     margin-left:120px;
+            //     width:200px;
+                       
+            
+                    
+                
+            // }
+        }
+    
+        &__format{
+            margin-top:20px;
+            color:black;
+        }
+        &__name{
+            font-weight:600;
+            font-size:25px;
+           
+        }
+        &__track{
+            font-size:25px;
+           
+        }
+        &__trackslist{
+            margin-top:5px;
+    
+        }
+        &__artist{
+            font-size:20px;
+        }
+    
+        &__year{
+            font-size:20px;
+            margin-left:20px;
+            
+        }
+    
+        &__div{
+            display:flex;
+        }
+        
+        &__description{
+            color:black;
+            margin-top:20px;
+            
+        }
+        
+        &__genre{
+            margin-top:20px;
+            
+        }
+    
+       
+        
+        
+    }
+    
+    .actions{
+       
+        margin-top:10px;
+        margin-bottom:10px;
+        margin-left:0px;
+        display:block;
+    
+        &__price{
+            margin-left:20px;
+            font-weight: 600;
+        }
+    
+        &__buy{
+            background-color:#1A799D;
+            margin-left:100px;
+            
+        }
+    
+        &__add{
+            margin-left:20px;
+            
+            
+        }
+        
+    }
+    
     
 }

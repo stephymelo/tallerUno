@@ -231,5 +231,222 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .productformbody{
+   
+        background-size: cover;
+        background-repeat: no-repeat;
+        background:linear-gradient(182.2deg, #FEFEFF 66.38%, #91AFDC 98.23%);
+        li{
+            color:black;
+    
+        }
+        a{
+            color:black;
+    
+        }
+        p{
+            color:black;
+        }
+        label{
+            font-weight:500;
+            color:black;
+        }
+    }
+    
+    .header {
+        
+        width: 100%;
+        display: flex;
+        padding: 2% 0;
+    
+        &__img {
+          margin-left: 40px;
+          width: 25%;
+        }
+    
+        div {
+          width: 50%;
+        }
+    
+        .navegacion {
+          top: 30px;
+          right: 0;
+          width: 50%;
+          font-size: 16px;
+        }
+    
+        .navegacion ul {
+          color: black;
+          list-style: none;
+          display: flex;
+          justify-content: space-around;
+          margin-right: 10px;
+        }
+    
+        .navegacion ul input {
+          color:black;
+          border-color: black;
+          opacity: 30%;
+          border-radius: 5px;
+          border-style: none;
+          margin-left: 10px;
+        }
+      }
+    
+      .title{
+          margin-left:50px;
+          font-weight:600;
+          font-size:18px;
+    
+      }
+    
+    .productForm{
+        display: block;
+        margin-left:50px;
+        margin-top:10px;
+        margin-right:50px;
+        padding-bottom: 70px;
+        
+    
+        &__section{
+            
+            &--1{
+                margin-top:50px;
+                width:100%;
+            }
+            &--2{
+                width:100%;
+                margin-top:25px;
+                border-color: gray;
+            }
+            &--3{
+                margin-right:25px;
+                margin-top:50px;
+                width:100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &__div{
+            display: block;
+                &--2{
+                    
+                    margin-top:20px;
+                    display: flex;
+
+                    > div{
+                        width: 40%;
+                    }
+
+                }
+
+                &--3{
+                    margin-top:20px;
+                  
+                }
+                &--4{
+                    margin-top:20px;
+                    :first-child{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    
+                    
+                  
+                }
+                &--5{
+                    display: block;
+                  
+                }
+                &--6{
+                    margin-top:20px;
+                  
+                }
+            
+            
+        }
+   
+        &__checkbox{
+            margin-bottom:0px;
+            margin-left:10px;
+            margin-top: 2px;
+    
+        }
+      
+        &__label{
+            display:block;
+            margin-top:10px;
+            margin-right:10px;
+            margin-bottom: 10px;
+            
+           
+           &--checkbox{
+               margin-bottom:0px;
+               margin-left:10px;
+               margin-top: 2px;
+           }
+    
+        }
+    
+        &__input{
+            width:100%;
+            margin-right:30px;
+           
+    
+        }
+        &__price{
+            display: block;
+        }
+    
+        &__btn{
+    
+            
+            margin-top:0px;
+            
+           
+        }
+    
+        &__track{
+            margin-right:10px;
+            margin-top:5px;
+            width: 100%;
+    
+        }
+        &__addtrack{
+            padding: 5px 15px 5px 15px;
+          
+        }
+    
+        &__genre{
+            margin-right:30px;
+            
+            display: block;
+        }
+    
+        &__date{
+            display: block;
+            width: 100%;
+        }
+        &__description{
+            height:100px;
+            width:100%;
+
+        }
+
+        &__artist{
+            width: 100%;
+        }
+        &__images{
+            display:flex;
+            flex-wrap: wrap;
+            & img{
+                margin-right:5px;
+                margin-bottom:0px;
+                margin-top:10px;
+                width:30%;
+            }
+        }
+
+    }
     
 }
