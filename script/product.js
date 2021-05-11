@@ -36,16 +36,21 @@ const cartBtn = document.querySelector('.actions__add');
 const handleCollectionResult = (querySnapshot) => {
   querySnapshot.forEach((doc) => {
     const data = doc.data();
-cartBtn.addEventListener('click', function () {
-  addToMyCart({
-    ...data,
-    id: doc.id,
-  });
-  //localStorage.setItem('store__cart', JSON.stringify(cart));
-});
+    addToMyCart({
+      ...data,
+      id: doc.id,
+    });
+
 });
 
 }
+
+cartBtn.addEventListener('click', function () {
+  productsCol.get().then(handleCollectionResult);
+  console.log(addToMyCart());
+  //localStorage.setItem('store__cart', JSON.stringify(cart));
+});
+
 
 
 
@@ -96,7 +101,7 @@ productsCol
 
 
     for (let index = 0; index < arrayimg.length; index++) {
-      checkboxes.push(`<input data-type="image" class="productsingle__checkbox" type="radio" name="image"></input>`);
+      checkboxes.push(`<input data-type="image" class="productsingle__checkbox" type="radio" name="image"> </input>`);
 
     }
 
@@ -138,7 +143,7 @@ productsCol
     productDescription.innerText = data.description;
     productArtist.innerText = data.artist;
     productGenre.innerText = `Genre: ${data.genre}`;
-    productFormat.innerHTML = `Format: <strong>${(data.format)}</strong>`;
+    productFormat.innerHTML = `Format: ${(data.format)}`;
 
     // tracklist
     for (i = 0; i < tracklist.length; i++) {
@@ -146,5 +151,5 @@ productsCol
       productTracks.innerHTML += `<li class="productsingle__trackslist"> ${(tracklist[i])} </li>`;
 
     }
-    console.log(data.format);
+
   });

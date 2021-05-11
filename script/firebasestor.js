@@ -32,6 +32,7 @@ firebase.auth().onAuthStateChanged((user) => {
 let cart = [];
 const cartBtnNumber = document.querySelector('.cartBtn span');
 const CART_COLLECTION = db.collection('cart');
+const ORDERS_COLLECTION = db.collection('orders');
 
 const addToMyCart = (product) => {
   cart.push(product);
@@ -56,6 +57,9 @@ const getMyCart = (uid) => {
 
 
 
+
+
+////BURGER MENU
 
 const burgerMenu = document.querySelector('.burgerMenu');
 const navegacion = document.querySelector('.navegacion');

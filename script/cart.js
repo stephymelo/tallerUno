@@ -51,19 +51,20 @@ renderCart = () => {
 }
 
 
+
 const deletebtn = document.querySelector('.productcheckout__delete');
 
-deletebtn.addEventListener('click', function (event) {
-  event.preventDefault();
-  console.log("alo");
+// deletebtn.addEventListener('click', function (event) {
+//   event.preventDefault();
+//   console.log("alo");
 
-  // productsCol.doc("").delete().then(() => {
-  //     console.log("Document successfully deleted!");
-  // }).catch((error) => {
-  //     console.error("Error removing document: ", error);
-  // });
+//   productsCol.doc("").delete().then(() => {
+//       console.log("Document successfully deleted!");
+//   }).catch((error) => {
+//       console.error("Error removing document: ", error);
+//   });
 
-});
+// });
 
 
 /// suma de los precios

@@ -36,10 +36,19 @@ const handleCollectionResult = (querySnapshot) => {
     // add a Carrito
     const cartBtn = product.querySelector('.product__cartBtn');
     cartBtn.addEventListener('click', function () {
-      cart.push(data);
-      localStorage.setItem('store__cart', JSON.stringify(cart));
-      cartBtnNumber.innerText = cart.length;
+      addToMyCart({
+        ...data,
+        id: doc.id,
+      });
+      //localStorage.setItem('store__cart', JSON.stringify(cart));
     });
+ 
+    // const cartBtn = product.querySelector('.product__cartBtn');
+    // cartBtn.addEventListener('click', function () {
+    //   cart.push(data);
+    //   localStorage.setItem('store__cart', JSON.stringify(cart));
+    //   cartBtnNumber.innerText = cart.length;
+    // });
   
 
   });
