@@ -11,13 +11,16 @@ const handleCollectionResult = (querySnapshot) => {
     let img = data.images[0]?.url;
   
     product.innerHTML = `
+       <a class="product__ref" href="./product.html?id=${doc.id}&name=${data.name}">
         <img class="product__img" src="${img}" alt="">
         <div class="product__info">
           <div class="product__info product__info--1">
             <h1 class="product__title">
               <strong>${data.name} </strong><br> ${data.artist}
             </h1>
+            <a>
           </div>
+          
           <div class="product__info product__info--2">
             <h3 class="product__price">$ ${data.price}.00 USD </h3>
             <button class="product__cartBtn">+</button>
@@ -26,7 +29,8 @@ const handleCollectionResult = (querySnapshot) => {
         
       `;
     product.classList.add('product');
-    product.setAttribute('href', `./product.html?id=${doc.id}&name=${data.name}`);
+    // const productimg = product.querySelector('.product__img');
+    // productimg.setAttribute('href', `./product.html?id=${doc.id}&name=${data.name}`);
 
     list.appendChild(product);
 
@@ -40,16 +44,10 @@ const handleCollectionResult = (querySnapshot) => {
         ...data,
         id: doc.id,
       });
-      //localStorage.setItem('store__cart', JSON.stringify(cart));
+      
     });
  
-    // const cartBtn = product.querySelector('.product__cartBtn');
-    // cartBtn.addEventListener('click', function () {
-    //   cart.push(data);
-    //   localStorage.setItem('store__cart', JSON.stringify(cart));
-    //   cartBtnNumber.innerText = cart.length;
-    // });
-  
+   
 
   });
 }

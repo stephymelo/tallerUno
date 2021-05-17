@@ -18,38 +18,17 @@ const prooductYear = document.querySelector('.productsingle__year');
 const productimgdiv = document.querySelector('.productsingle__imgdiv');
 const productcheckboxes = document.querySelector('.productsingle__checkboxes');
 const productDivnew = document.querySelector('.productsingle__imgnew');
-
+const cartBtn = document.querySelector('.actions__add');
 let years = [];
 let tracklist = [];
 let arrayimg = [];
 let checkboxes = [];
 
 
-const cartBtn = document.querySelector('.actions__add');
 
-// cartBtn.addEventListener('click', function () {
-//   cart.push(data);
-//   localStorage.setItem('store__cart', JSON.stringify(cart));
-//   cartBtnNumber.innerText = cart.length;
-// });
 
-const handleCollectionResult = (querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    const data = doc.data();
-    addToMyCart({
-      ...data,
-      id: doc.id,
-    });
 
-});
 
-}
-
-cartBtn.addEventListener('click', function () {
-  productsCol.get().then(handleCollectionResult);
-  console.log(addToMyCart());
-  //localStorage.setItem('store__cart', JSON.stringify(cart));
-});
 
 
 
@@ -68,6 +47,12 @@ productsCol
   .get()
   .then(function (doc) {
     const data = doc.data();
+    cartBtn.addEventListener('click', function () {
+      addToMyCart({
+        ...data,
+        id: doc.id,
+      });
+    });
     // if(!data) {
     //   location.href = './404.html';
     // }
@@ -88,7 +73,7 @@ productsCol
       arrayimg.push(`<img class="productsingle__img--${index}" src="${element.url}" />`);
 
     });
-    console.log(arrayimg[0]);
+   
     productimgdiv.innerHTML = arrayimg;
     // if(clientWidth<=100){
     //   productDivnew.innerHTML = arrayimg;
@@ -115,7 +100,7 @@ productsCol
           productimgdiv.style.transform = 'translate(-' + (widthNew*index)+ 'px,0px)';
           // productimgdiv.style.left = `${index * 400}px`
           
-          console.log(widthNew+"width");
+          
         } 
 
       }
@@ -147,7 +132,6 @@ productsCol
 
     // tracklist
     for (i = 0; i < tracklist.length; i++) {
-      console.log(tracklist[1]);
       productTracks.innerHTML += `<li class="productsingle__trackslist"> ${(tracklist[i])} </li>`;
 
     }
