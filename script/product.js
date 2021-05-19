@@ -23,6 +23,7 @@ let years = [];
 let tracklist = [];
 let arrayimg = [];
 let checkboxes = [];
+let quantity;
 
 
 
@@ -53,10 +54,7 @@ productsCol
         id: doc.id,
       });
     });
-    // if(!data) {
-    //   location.href = './404.html';
-    // }
-
+    
     let yea = data.date;
     years = yea.split("-");
     tracklist = data.tracklist;

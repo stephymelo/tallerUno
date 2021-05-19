@@ -58,12 +58,8 @@ renderCart = () => {
          this.parentNode.remove(event.target.closest(padre));
          console.log(cart.length);
          cart.splice(index,1);
-
-        // var index = cart.map(function(item) { return item.uid; }).indexOf(this);
   
-  });
-
-
+    });
   });
 
 
