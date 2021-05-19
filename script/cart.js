@@ -53,12 +53,15 @@ renderCart = () => {
   console.log(cart.length);
  
   deletebtn.addEventListener('click', function (event) {
-        var index=cart.indexOf(this);
+        const index = cart.indexOf(data);
+
         
-         this.parentNode.remove(event.target.closest(padre));
-         console.log(cart.length);
-         cart.splice(index,1);
-  
+        this.parentNode.remove(event.target.closest(padre));
+        console.log(cart.length);
+        cart.splice(index,1);
+        cartCol.doc(loggedUser.uid).set({
+          cart: cart,
+        });
     });
   });
 

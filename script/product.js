@@ -84,7 +84,7 @@ productsCol
 
 
     for (let index = 0; index < arrayimg.length; index++) {
-      checkboxes.push(`<input data-type="image" class="productsingle__checkbox" type="radio" name="image"> </input>`);
+      checkboxes.push(`<input data-type="image" class="productsingle__checkbox" type="radio" name="image"></input>`);
 
     }
 
@@ -125,8 +125,8 @@ productsCol
     productPrice.innerText = `Price: $ ${data.price}.00`;
     productDescription.innerText = data.description;
     productArtist.innerText = data.artist;
-    productGenre.innerText = `Genre: ${data.genre}`;
-    productFormat.innerHTML = `Format: ${(data.format)}`;
+    productGenre.innerHTML = `<strong>Genre:</strong>  ${(data.genre)}`;
+    productFormat.innerHTML = `<strong>Format:</strong>  ${(data.format)}`;
 
     // tracklist
     for (i = 0; i < tracklist.length; i++) {

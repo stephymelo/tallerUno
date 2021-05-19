@@ -17,6 +17,7 @@
     hr{
         border-width: 2px;
     }
+ 
 }
 
 .productsingle{
@@ -27,19 +28,19 @@
         width:20%;
         position: relative;
         overflow:hidden;
-        margin-left:80px;
+        margin-left:190px;
        
 
     }
     &--2{
-        margin-left:160px;
+        margin-left:100px;
         width:30%;
-        margin-right:30px;
+        margin-right:20px;
 
     }
     &--3{
         width:30%;
-        margin-right:60px;
+        margin-right:90px;
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -56,6 +57,17 @@
 
             li{
                 margin-top:20px;
+                counter-increment: item;
+                list-style-type: none;
+                
+                &::before {
+                    content: counter(item) '.';
+                    display: inline-block;
+                    font-weight: bold;
+                    padding-right: .5rem;      
+                    text-align: right;
+                    width: 1.5rem;
+                  }
             }
 
         }
@@ -65,8 +77,8 @@
 
     &__checkboxes{
         position:absolute;
-        top:300px;
-        left:110px;
+        top:400px;
+        left:120px;
         display:flex;
     }
 
@@ -91,11 +103,12 @@
     }
     &__name{
         font-weight:600;
-        font-size:25px;
+        font-size: 39px;
+        margin-bottom: 20px;
        
     }
     &__track{
-        font-size:25px;
+        font-size:28px;
        
     }
     &__trackslist{
@@ -103,11 +116,11 @@
 
     }
     &__artist{
-        font-size:20px;
+        font-size:28px;
     }
 
     &__year{
-        font-size:20px;
+        font-size:28px;
         margin-left:20px;
         
     }
@@ -118,7 +131,7 @@
     
     &__description{
         color:black;
-        margin-top:20px;
+        margin-top:50px;
         
     }
     
@@ -126,20 +139,27 @@
         margin-top:20px;
         
     }
-
+    .vertical {
+        margin-left:70px;
+        border-left: 2px solid rgb(190, 190, 190);
+        height: 500px;
+        display:block
+     
+    }
    
     
     
 }
 
 .actions{
-    margin-bottom:53px;
-    margin-left:500px;
+    margin-bottom:100px;
+    margin-left:600px;
     display:flex;
 
     &__price{
         margin-left:20px;
         font-weight: 600;
+        font-size: 26px;
     }
 
     &__buy{
@@ -178,7 +198,9 @@
             border-width: 2px;
         }
     }
-    
+    .vertical{
+        display:none;
+    }
     .productsingle{
         display: flex;
         flex-direction: column;
@@ -234,7 +256,7 @@
     
         &__checkboxes{
             position:absolute;
-            top:240px;
+            top:340px;
             left:90px;
             display:flex;
         }

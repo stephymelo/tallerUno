@@ -7,6 +7,9 @@
   <title>My Cart</title>
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
 </head>
 <body class="cartbody">
     <header class="header">
@@ -17,7 +20,7 @@
           <!-- <section class="authButtons"></section> -->
           <ul class="navegacion__list">
             <li><a href="./store.html">Store</a></li>
-            <li><a href="/cart.html" class="cartBtn">Cart <span></span></a></li>
+            <li><a href="./cart.html" class="cartBtn">Cart <span></span></a></li>
             <li> Discover <input type="text"></input></li>
             <li class="authButtons"> Log in</li>
           </ul>
@@ -41,18 +44,18 @@
     <section class="cart__section--2">
         <h2>Checkout</h2>
         <p class="subtotal"></p>
-        <h3 class="checkout__total">Total: $ <span></span></h3>
+        <p class="checkout__total">Total: $ <span></span></p>
         <p>Free shipping</p>
         <p class="cartBtn">Quantity items:<span></span></p>
         
         <form class="checkout__form">
           <div class="field">
-            <label class="field__label" for="ccnumber">Credit card number</label>
+            <label class="field__label" for="ccnumber">Credit card</label>
             <input class="field__input" id="ccnumber" name="ccnumber" type="number" placeholder="">
           </div>
   
           <div class="field">
-            <label class="field__label" for="address">Delivery Address</label>
+            <label class="field__label" for="address">Address</label>
             <input class="field__input" id="address" name="address" type="text" placeholder="">
           </div>
           
