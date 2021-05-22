@@ -288,6 +288,9 @@ body a :hover {
 }
 
 @media screen and (max-width: 1000px) {
+  .header {
+    height: 50px;
+  }
   .cartbody {
     background-size: cover;
     background-repeat: no-repeat;
@@ -313,11 +316,21 @@ body a :hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .cart__section--1 {
-    margin-left: 40px;
-    margin-right: 30px;
-    width: 70%;
+    margin-left: 30px;
+    margin-right: 20px;
+    width: 100%;
   }
   .cart__section--2 {
     display: -webkit-box;
@@ -330,20 +343,21 @@ body a :hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 50px;
+    margin-right: 0px;
     border-width: 1.5px;
     height: 50vh;
     border-color: black;
     border-style: solid;
     border-radius: 10px;
-    width: 30%;
-    margin-bottom: 338px;
+    width: 80%;
+    margin-bottom: 100px;
   }
   .cart__section--2 .subtotal {
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .cart__section--2 .paybtn {
-    margin-top: 80px;
+    width: 100%;
+    margin-top: 20px;
   }
   .productcheckout {
     text-decoration: none;
@@ -362,15 +376,24 @@ body a :hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 0px;
+    padding-right: 10px;
+    margin-bottom: 10px;
   }
   .productcheckout__img {
-    width: 10%;
+    height: 100px;
+    width: 100px;
   }
   .productcheckout__info {
-    margin-left: 60px;
-    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 20px;
+    padding: 0px;
   }
   .productcheckout__info--1 {
     display: -webkit-box;
@@ -382,14 +405,24 @@ body a :hover {
     margin-bottom: 5px;
   }
   .productcheckout__delete {
-    margin-top: 40px;
+    margin-top: 0px;
     color: #315d96;
     background-color: transparent;
     font-size: 15px;
     padding-left: 1px;
-    padding-top: 1px;
+    padding-top: 0px;
     padding-right: 1px;
     padding-bottom: 1px;
+  }
+  .checkout__total {
+    margin-top: 10px;
+  }
+  .checkout__total span {
+    font-size: 16px;
+  }
+  .cartBtn span {
+    color: black;
+    font-size: 16px;
   }
   .checkout__form {
     -webkit-box-orient: vertical;
