@@ -22,21 +22,107 @@
         color: black;
     }
 
-    .orders{
+    
+}
+
+.orderss{
+    display: flex;
+    flex-direction: row;
+    &__article{
         width:40%;
         margin-left:150px;
+        margin-bottom: 60px;
+       
+    }
+    
+ 
+
+}
+
+.orders{
+    &__section{
+        margin-top:50px;
+
+    }
+
+    &__name{
+        margin-top:10px;
+    }
+
+    &__numitem{
+        margin-top:10px;
+
+    }
+    &__total{
+        margin-top:10px;
+
+    }
+
+    &__number{
+        font-size:18px;
+    }
+
+}
+
+.girl{
+   
+    &__img{
+        width:100%;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .orderss{
+        display: flex;
+        flex-direction: row;
+        &__article{
+            width:50%;
+            margin-left:150px;
+            margin-bottom: 60px;
+           
+        }
+        
+    
+    }
+
+    .girl{
+        
+    display: none;
+      
+    }
+    .orders{
+        width:40%;
+        font-size:14px;
+        margin-left:150px;
+        margin-bottom: 60px;
         &__section{
             margin-top:50px;
-
+    
         }
-
+    
         &__name{
             margin-top:10px;
         }
-
-        &__numitems{
+    
+        &__numitem{
+            margin-top:10px;
+            span{
+                font-size:14px;
+                margin-left:0px;
+            }
+    
+        }
+        &__total{
             margin-top:10px;
 
+    
         }
+    
+        
+    }
+
+    .girl{
+        display:none;
     }
 }

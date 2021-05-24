@@ -2714,20 +2714,88 @@ main .burgerMenu {
   color: black;
 }
 
-.orderbody .orders {
-  width: 40%;
-  margin-left: 150px;
+.orderss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.orderbody .orders__section {
+.orderss__article {
+  width: 40%;
+  margin-left: 150px;
+  margin-bottom: 60px;
+}
+
+.orders__section {
   margin-top: 50px;
 }
 
-.orderbody .orders__name {
+.orders__name {
   margin-top: 10px;
 }
 
-.orderbody .orders__numitems {
+.orders__numitem {
   margin-top: 10px;
+}
+
+.orders__total {
+  margin-top: 10px;
+}
+
+.orders__number {
+  font-size: 18px;
+}
+
+.girl__img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .orderss {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .orderss__article {
+    width: 50%;
+    margin-left: 150px;
+    margin-bottom: 60px;
+  }
+  .girl {
+    display: none;
+  }
+  .orders {
+    width: 40%;
+    font-size: 14px;
+    margin-left: 150px;
+    margin-bottom: 60px;
+  }
+  .orders__section {
+    margin-top: 50px;
+  }
+  .orders__name {
+    margin-top: 10px;
+  }
+  .orders__numitem {
+    margin-top: 10px;
+  }
+  .orders__numitem span {
+    font-size: 14px;
+    margin-left: 0px;
+  }
+  .orders__total {
+    margin-top: 10px;
+  }
+  .girl {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
