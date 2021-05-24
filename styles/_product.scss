@@ -197,10 +197,11 @@
         hr{
             border-width: 2px;
         }
+        .vertical{
+            display:none;
+        }
     }
-    .vertical{
-        display:none;
-    }
+    
     .productsingle{
         display: flex;
         flex-direction: column;
@@ -327,7 +328,7 @@
        
         margin-top:10px;
         margin-bottom:10px;
-        margin-left:0px;
+        margin-left:50px;
         display:block;
         height:20vh;
     
