@@ -104,7 +104,7 @@ renderCart = () => {
           cart: [],
         });
   
-        location.href = '/store.html';
+        location.href = './tallerUno/order.html';
       });
   
     console.log(order)
