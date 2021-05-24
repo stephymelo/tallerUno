@@ -282,13 +282,22 @@ body a :hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkout__form .field__label {
+  width: 40%;
 }
 
 .checkout__form .field__input {
+  width: 60%;
   margin-left: 0px;
+}
+
+.checkout__form .paybtn {
+  width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -353,7 +362,7 @@ body a :hover {
             align-items: center;
     margin-right: 0px;
     border-width: 1.5px;
-    height: 40vh;
+    height: 33vh;
     border-color: black;
     border-style: solid;
     border-radius: 10px;
@@ -421,13 +430,14 @@ body a :hover {
     padding-right: 1px;
     padding-bottom: 1px;
   }
-  .checkout__total {
-    margin-top: 10px;
-  }
   .checkout__total span {
+    margin-left: 0px;
+    padding-top: 0px;
     font-size: 16px;
   }
-  .cartBtn span {
+  .checkout__quantity span {
+    margin-left: 0px;
+    padding-top: 0px;
     color: black;
     font-size: 16px;
   }
@@ -2671,5 +2681,53 @@ main .burgerMenu {
     margin-top: 10px;
     width: 30%;
   }
+}
+
+.orderbody {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(182.2deg, #fefeff 66.38%, #91afdc 98.23%);
+}
+
+.orderbody hr {
+  border-color: gray;
+}
+
+.orderbody h1 {
+  font-weight: 600;
+}
+
+.orderbody h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.orderbody p {
+  color: black;
+}
+
+.orderbody li {
+  color: black;
+}
+
+.orderbody a {
+  color: black;
+}
+
+.orderbody .orders {
+  width: 40%;
+  margin-left: 150px;
+}
+
+.orderbody .orders__section {
+  margin-top: 50px;
+}
+
+.orderbody .orders__name {
+  margin-top: 10px;
+}
+
+.orderbody .orders__numitems {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

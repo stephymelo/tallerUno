@@ -94,6 +94,7 @@
     }
 
     &__price {
+
     }
 
     &__delete {
@@ -117,16 +118,20 @@
         margin-top:20px;
         display: flex;
         flex-direction: row;
-        justify-content: left;
+        justify-content: space-between;
         &__label{
+            width:40%;
            
 
         }
         &__input{
+            width:60%;
             margin-left:0px;
         }
     }
-    .submit{
+    .paybtn{
+        width:100%;
+        
 
     }
 }
@@ -182,7 +187,7 @@
             align-items: center;
             margin-right: 0px;
             border-width: 1.5px;
-            height: 40vh;
+            height: 33vh;
             border-color: black;
             border-style: solid;
             border-radius: 10px;
@@ -255,19 +260,24 @@
 }
 .checkout__total{
    
-    margin-top:10px;
     span{
+        margin-left:0px;
+        padding-top:0px;
         font-size: 16px;
     }
 
 }
-
-.cartBtn{
-    span{
-        color:black;
-        font-size: 16px;
-    }
+.checkout__quantity{
+   
+        span{
+            margin-left:0px;
+            padding-top:0px;
+            color:black;
+            font-size: 16px;
+        }
+    
 }
+
 
 .checkout__form{
     flex-direction: column;
@@ -287,9 +297,7 @@
             margin-left:40px;
         }
     }
-    .submit{
-
-    }
+   
 }
 
 

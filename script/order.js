@@ -1,17 +1,20 @@
+
+  
 const orders = document.querySelector('.orders');
-db.collection('orders')
-.get()
-.then((querySnapshot)=>{
+ordersCol.get().then((querySnapshot)=>{
   querySnapshot.forEach(doc => {
-    const currentOrder = doc.data(); 
-    console.log(currentOrder);
-    const orderElem = document.createElement('div'); 
-    orderElem.classList.add('order'); 
-    orderElem.innerHTML = `<div class="order__main-info">
-    <h1 class="order__name">${currentOrder.date}</h1>
+    const myOrder = doc.data(); 
+    console.log(myOrder);
+    const orderIndiv = document.createElement('div'); 
+    orderIndiv.classList.add('order'); 
+    orderIndiv.innerHTML = `<section class="orders__section">
+    <p class="orders__name">${myOrder.date}</p>
+    <h1 class="orders__name">${myOrder.address}</h1>
    
-  </div>
-  <h3 class="order__items"><span class="order__number">${currentOrder.producIds.length}</span> products</h3>`; 
-  orders.appendChild(orderElem); 
+  </section>
+  <p class="orders__numitem"><span class="order__number">${myOrder.producIds.length}</span> products</p>
+  <hr>
+  `; 
+  orders.appendChild(orderIndiv); 
   });
 })

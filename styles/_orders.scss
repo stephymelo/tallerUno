@@ -1,0 +1,42 @@
+.orderbody{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(182.2deg, #fefeff 66.38%, #91afdc 98.23%);
+    hr {
+        border-color: gray;
+    }
+    h1{
+        font-weight: 600;
+    }
+    h2 {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    p {
+        color: black;
+    }
+    li {
+        color: black;
+    }
+    a {
+        color: black;
+    }
+
+    .orders{
+        width:40%;
+        margin-left:150px;
+        &__section{
+            margin-top:50px;
+
+        }
+
+        &__name{
+            margin-top:10px;
+        }
+
+        &__numitems{
+            margin-top:10px;
+
+        }
+    }
+}
